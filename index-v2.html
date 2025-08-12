@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Radars - Version 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        .hero-bg {
+            background: #f8fafc;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .episode-card:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #1a8FCF;
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Custom blue colors using #004FA1 */
+        .text-custom-blue {
+            color: #004FA1;
+        }
+        
+        .bg-custom-blue {
+            background-color: #004FA1;
+        }
+        
+        .hover\:text-custom-blue-dark:hover {
+            color: #003A7A;
+        }
+        
+        .hover\:bg-custom-blue-dark:hover {
+            background-color: #003A7A;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 bg-transparent z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-end items-center h-16">
+                    <div class="flex items-center space-x-8">
+                        <a href="#hosts" class="text-gray-700 hover:text-custom-blue font-medium transition-colors">Meet the Hosts</a>
+                        <a href="#episodes" class="text-gray-700 hover:text-custom-blue font-medium transition-colors">Episodes</a>
+                        <button class="bg-custom-blue hover:bg-custom-blue-dark text-white px-6 py-2 rounded-full font-medium transition-all">
+                            Listen Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative min-h-screen flex items-center justify-center text-gray-900">
+        <div class="text-center max-w-4xl mx-auto px-6">
+
+            
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+                The Social <span class="text-custom-blue">Radars</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-4 text-gray-700">
+                with Jessica Livingston & Carolynn Levy
+            </p>
+            
+            <p class="text-lg mb-12 text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Unfiltered conversations with Silicon Valley's most successful founders. 
+                Raw insights, untold stories, and the wisdom that built the startup world.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary px-8 py-4 rounded-full text-lg font-semibold shadow-xl">
+                    🎧 Listen Now
+                </button>
+                <button class="border-2 border-gray-300 bg-white px-8 py-4 rounded-full text-lg font-semibold text-gray-700 hover:bg-gray-50 transition-all">
+                    📧 Get Updates
+                </button>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+
+    <!-- Episodes Section -->
+    <section id="episodes" class="py-20 bg-white">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Episodes</h2>
+                <p class="text-lg text-gray-600 mb-8">Deep conversations with the founders who shaped Silicon Valley</p>
+                
+                <!-- Season Filter -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <button class="season-filter active px-6 py-2 rounded-full bg-custom-blue text-white font-medium hover:bg-custom-blue-dark transition-all" data-season="all">
+                        All Seasons
+                    </button>
+                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="4">
+                        Season 4
+                    </button>
+                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="3">
+                        Season 3
+                    </button>
+                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="2">
+                        Season 2
+                    </button>
+                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="1">
+                        Season 1
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Latest Episodes (Season 4) -->
+                <!-- Ron Conway Part 4 -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/ron-conway.webp" alt="Ron Conway" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ron Conway: The Napster Story (Part 4)</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">The legendary investor takes us behind the scenes of Napster's rise and fall.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ron Conway Part 3 -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/ron-conway.webp" alt="Ron Conway" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ron Conway: Early Google (Part 3)</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Behind the scenes at early Google with the investor who arranged their Series A round.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drew Houston -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/drew-houston.jpg" alt="Drew Houston" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Drew Houston: Building Dropbox</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">The Dropbox founder shares his journey from solving his own problem to becoming essential tech infrastructure.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sam Altman -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/sam-altman.jpg" alt="Sam Altman" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sam Altman: CEO of OpenAI</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">From Stanford sophomore to one of the most influential figures in tech and AI.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eric Migicovsky -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/eric-migicovsky.jpg" alt="Eric Migicovsky" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Eric Migicovsky: Pebble & Beeper</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">The journey of building one of the first smartwatches and Kickstarter's most-funded project.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alexandr Wang -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/alexandr-wang.jpg" alt="Alexandr Wang" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Alexandr Wang: Scale AI</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Inside the engine room of the AI Revolution with the founder supplying training data to top AI models.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Harj Taggar -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/harj-taggar.jpg" alt="Harj Taggar" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Harj Taggar: Y Combinator Partner</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">From YC-funded founder to first partner hire, with a front-row seat to startup history.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gusto Founders -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/gusto-founders.jpg" alt="Gusto Co-Founders" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gusto Co-Founders: Josh, Edward & Tomer</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">All three founders of the payroll company share their story of commitment and partnership.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ron Conway Part 1 -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="3">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/ron-conway.webp" alt="Ron Conway" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ron Conway: SV Angel</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">The embodiment of Silicon Valley culture shares stories from National Semiconductor to AI conferences.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 3</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surbhi Sarna -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/surbhi-sarna.jpg" alt="Surbhi Sarna" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Surbhi Sarna: nVision Medical</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">From personal health scare to pioneering women's health diagnostics, acquired for $275M.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tyler Shultz Part 2 -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/tyler-shultz.png" alt="Tyler Shultz" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Tyler Shultz: Theranos Whistleblower (Part 2)</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">The retaliation, legal threats, and nightmare of exposing Theranos fraud.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tyler Shultz Part 1 -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="4">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/tyler-shultz.png" alt="Tyler Shultz" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Tyler Shultz: Theranos Whistleblower (Part 1)</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">What it takes to speak out against powerful people putting patients at risk.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 4</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Season 3 Episodes -->
+
+                <!-- Ryan Petersen -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="3">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/ryan-petersen.jpg" alt="Ryan Petersen" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ryan Petersen: Flexport</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">From importing motorcycles to transforming global logistics during the pandemic.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 3</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- David Rusenko -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="3">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/david-rusenko.png" alt="David Rusenko" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">David Rusenko: Weebly</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">From college student to $365M Square acquisition, now focused on climate change.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 3</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yin Wu -->
+                <div class="episode-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-season="3">
+                    <div class="aspect-video bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="images/episodes/yin-wu.png" alt="Yin Wu" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 pb-8 flex flex-col h-48">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Yin Wu: Pulley</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Cap table management founder on persistence, determination, and having founders as users.</p>
+                        <div class="flex items-center justify-between mt-auto mb-2">
+                            <span class="text-sm text-gray-500">Season 3</span>
+                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More episodes would continue here... -->
+                
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="btn-primary px-8 py-3 rounded-full text-white font-semibold">
+                    View All Episodes
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Hosts Section -->
+    <section id="hosts" class="py-20 bg-gray-50">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Meet the Hosts</h2>
+                <p class="text-lg text-gray-600">The voices behind The Social Radars podcast</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <!-- Jessica Livingston -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-32 h-32 rounded-full overflow-hidden">
+                                    <img src="images/hosts/jessica-livingston.webp" alt="Jessica Livingston" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Jessica Livingston</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Jessica Livingston is one of the founders of Y Combinator, the first startup accelerator, which since 2005 has funded over 4000 companies. It was there that she got the nickname "the social radar" for her insights into the characters of successful founders. She is also the author of one of the best selling books about startups, Founders at Work. She lives in England with her husband and two sons, and enjoys writing about startups whenever she can find time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carolynn Levy -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-32 h-32 rounded-full overflow-hidden">
+                                    <img src="images/hosts/carolynn-levy.webp" alt="Carolynn Levy" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Carolynn Levy</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Carolynn Levy is Managing Director, Chief Legal Officer and head of the People Operations team at Y Combinator. During her 25-year legal career, Carolynn has helped thousands of startup founders with legal and business issues. She is known for creating the Safe, an open-sourced financing document that simplified investing in early stage companies.
+                                </p>
+                                <p class="text-gray-600 leading-relaxed mt-3">
+                                    Carolynn got her BA from UCLA and her JD from University of San Francisco. She joined Wilson Sonsini Goodrich and Rosati right after law school and stayed for 14 years, doing corporate and securities and M&A work. She lives in the SF Bay Area with her husband and is almost an empty-nester. She loves her two chihuahua rescues more than could be considered normal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listen Now CTA -->
+            <div class="text-center">
+                <a href="#" class="inline-block bg-custom-blue hover:bg-custom-blue-dark text-white px-8 py-4 rounded-full text-lg font-semibold transition-all shadow-lg">
+                    Listen Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">About The Show</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        The Social Radars brings you unfiltered conversations with the founders who shaped Silicon Valley. 
+                        Jessica Livingston and Carolynn Levy leverage their decades of experience at Y Combinator to 
+                        extract insights you won't hear anywhere else.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        From billion-dollar exits to spectacular failures, our guests share the real stories behind 
+                        building world-changing companies.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">⭐</span>
+                            <span class="font-semibold text-gray-900">4.9/5</span>
+                            <span class="text-gray-600">Rating</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🎧</span>
+                            <span class="font-semibold text-gray-900">50K+</span>
+                            <span class="text-gray-600">Listeners</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="images/hosts/jessica.png" alt="Jessica Livingston" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden w-full h-full bg-custom-blue items-center justify-center">
+                            <div class="text-center text-white p-8">
+                                <h3 class="text-2xl font-bold mb-2">Jessica & Carolynn</h3>
+                                <p class="text-lg opacity-90">Your Hosts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Version Toggle Widget -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <div class="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg border border-gray-200 p-3">
+            <div class="flex items-center gap-2 text-sm">
+                <span class="text-gray-600 font-medium">Version:</span>
+                <div class="flex bg-gray-100 rounded-md p-1">
+                    <button 
+                        id="v1-btn"
+                        onclick="switchVersion('v1')"
+                        class="px-3 py-1 rounded text-xs font-medium transition-all duration-200 text-gray-600 hover:text-gray-800"
+                    >
+                        V1
+                    </button>
+                    <button 
+                        id="v2-btn"
+                        onclick="switchVersion('v2')"
+                        class="px-3 py-1 rounded text-xs font-medium transition-all duration-200 bg-custom-blue text-white"
+                    >
+                        V2
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Season filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.season-filter');
+            const episodeCards = document.querySelectorAll('.episode-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const selectedSeason = this.getAttribute('data-season');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-custom-blue', 'text-white');
+                        btn.classList.add('bg-gray-100', 'text-gray-700');
+                    });
+                    
+                    this.classList.add('active', 'bg-custom-blue', 'text-white');
+                    this.classList.remove('bg-gray-100', 'text-gray-700');
+                    
+                    // Filter episodes
+                    episodeCards.forEach(card => {
+                        const cardSeason = card.getAttribute('data-season');
+                        
+                        if (selectedSeason === 'all' || cardSeason === selectedSeason) {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 200);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Version switching functionality
+        function switchVersion(version) {
+            const v1Btn = document.getElementById('v1-btn');
+            const v2Btn = document.getElementById('v2-btn');
+            
+            if (version === 'v1') {
+                // Switch to V1
+                window.location.href = './index.html';
+            } else if (version === 'v2') {
+                // Already on V2, no need to switch
+                v1Btn.className = 'px-3 py-1 rounded text-xs font-medium transition-all duration-200 text-gray-600 hover:text-gray-800';
+                v2Btn.className = 'px-3 py-1 rounded text-xs font-medium transition-all duration-200 bg-custom-blue text-white';
+            }
+        }
+    </script>
+</body>
+</html>
