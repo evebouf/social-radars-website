@@ -21,32 +21,83 @@
             transition: all 0.3s ease;
         }
         
+        /* Button System - Consistent with V1 */
         .btn-primary {
-            background: #1a8FCF;
+            background-color: #FF6600;
+            transition: all 0.2s ease;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 600;
             color: white;
-            border: none;
-            transition: all 0.3s ease;
         }
         
         .btn-primary:hover {
-            transform: translateY(-2px);
+            background-color: #E55A00;
+            transform: translateY(-1px);
         }
         
-        /* Custom blue colors using #004FA1 */
-        .text-custom-blue {
-            color: #004FA1;
+        .btn-secondary {
+            border: 2px solid #D1D5DB;
+            background-color: white;
+            transition: all 0.2s ease;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #374151;
         }
         
-        .bg-custom-blue {
-            background-color: #004FA1;
+        .btn-secondary:hover {
+            border-color: #9CA3AF;
+            background-color: #F9FAFB;
+            color: #111827;
+            transform: translateY(-1px);
         }
         
-        .hover\:text-custom-blue-dark:hover {
-            color: #003A7A;
+        .btn-small {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
         
-        .hover\:bg-custom-blue-dark:hover {
-            background-color: #003A7A;
+        .btn-small-primary {
+            background-color: #FF6600;
+            color: white;
+        }
+        
+        .btn-small-primary:hover {
+            background-color: #E55A00;
+        }
+        
+        .btn-small-secondary {
+            border: 1px solid #FF6600;
+            background-color: white;
+            color: #FF6600;
+        }
+        
+        .btn-small-secondary:hover {
+            background-color: #FF6600;
+            color: white;
+        }
+        
+        /* Orange theme colors */
+        .text-custom-orange {
+            color: #FF6600;
+        }
+        
+        .bg-custom-orange {
+            background-color: #FF6600;
+        }
+        
+        .hover\:text-custom-orange-dark:hover {
+            color: #E55A00;
+        }
+        
+        .hover\:bg-custom-orange-dark:hover {
+            background-color: #E55A00;
         }
     </style>
 </head>
@@ -56,9 +107,9 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-end items-center h-16">
                     <div class="flex items-center space-x-8">
-                        <a href="#hosts" class="text-gray-700 hover:text-custom-blue font-medium transition-colors">Meet the Hosts</a>
-                        <a href="#episodes" class="text-gray-700 hover:text-custom-blue font-medium transition-colors">Episodes</a>
-                        <button class="bg-custom-blue hover:bg-custom-blue-dark text-white px-6 py-2 rounded-full font-medium transition-all">
+                        <a href="#hosts" class="text-gray-700 hover:text-custom-orange font-medium transition-colors">Meet the Hosts</a>
+                        <a href="#episodes" class="text-gray-700 hover:text-custom-orange font-medium transition-colors">Episodes</a>
+                        <button class="btn-small btn-small-primary">
                             Listen Now
                         </button>
                     </div>
@@ -85,10 +136,10 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="btn-primary px-8 py-4 rounded-full text-lg font-semibold shadow-xl">
+                <button class="btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
                     🎧 Listen Now
                 </button>
-                <button class="border-2 border-gray-300 bg-white px-8 py-4 rounded-full text-lg font-semibold text-gray-700 hover:bg-gray-50 transition-all">
+                <button class="btn-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                     📧 Get Updates
                 </button>
             </div>
@@ -112,19 +163,19 @@
                 
                 <!-- Season Filter -->
                 <div class="flex flex-wrap justify-center gap-3 mb-8">
-                    <button class="season-filter active px-6 py-2 rounded-full bg-custom-blue text-white font-medium hover:bg-custom-blue-dark transition-all" data-season="all">
+                    <button class="season-filter active btn-small btn-small-primary" data-season="all">
                         All Seasons
                     </button>
-                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="4">
+                    <button class="season-filter btn-small bg-gray-100 text-gray-700 hover:bg-gray-200" data-season="4">
                         Season 4
                     </button>
-                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="3">
+                    <button class="season-filter btn-small bg-gray-100 text-gray-700 hover:bg-gray-200" data-season="3">
                         Season 3
                     </button>
-                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="2">
+                    <button class="season-filter btn-small bg-gray-100 text-gray-700 hover:bg-gray-200" data-season="2">
                         Season 2
                     </button>
-                    <button class="season-filter px-6 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-all" data-season="1">
+                    <button class="season-filter btn-small bg-gray-100 text-gray-700 hover:bg-gray-200" data-season="1">
                         Season 1
                     </button>
                 </div>
@@ -142,7 +193,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">The legendary investor takes us behind the scenes of Napster's rise and fall.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -157,7 +208,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">Behind the scenes at early Google with the investor who arranged their Series A round.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -172,7 +223,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">The Dropbox founder shares his journey from solving his own problem to becoming essential tech infrastructure.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -187,7 +238,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">From Stanford sophomore to one of the most influential figures in tech and AI.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -202,7 +253,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">The journey of building one of the first smartwatches and Kickstarter's most-funded project.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -217,7 +268,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">Inside the engine room of the AI Revolution with the founder supplying training data to top AI models.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -232,7 +283,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">From YC-funded founder to first partner hire, with a front-row seat to startup history.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -247,7 +298,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">All three founders of the payroll company share their story of commitment and partnership.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -262,7 +313,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">The embodiment of Silicon Valley culture shares stories from National Semiconductor to AI conferences.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 3</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -277,7 +328,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">From personal health scare to pioneering women's health diagnostics, acquired for $275M.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -292,7 +343,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">The retaliation, legal threats, and nightmare of exposing Theranos fraud.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -307,7 +358,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">What it takes to speak out against powerful people putting patients at risk.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 4</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -324,7 +375,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">From importing motorcycles to transforming global logistics during the pandemic.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 3</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -341,7 +392,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">From college student to $365M Square acquisition, now focused on climate change.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 3</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -356,7 +407,7 @@
                         <p class="text-gray-600 text-sm mb-4 flex-grow">Cap table management founder on persistence, determination, and having founders as users.</p>
                         <div class="flex items-center justify-between mt-auto mb-2">
                             <span class="text-sm text-gray-500">Season 3</span>
-                            <button class="text-custom-blue hover:text-custom-blue-dark font-medium text-sm mr-2">Listen →</button>
+                            <button class="btn-small btn-small-secondary">Listen →</button>
                         </div>
                     </div>
                 </div>
@@ -366,7 +417,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <button class="btn-primary px-8 py-3 rounded-full text-white font-semibold">
+                <button class="btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
                     View All Episodes
                 </button>
             </div>
@@ -485,14 +536,14 @@
                     <button 
                         id="v1-btn"
                         onclick="switchVersion('v1')"
-                        class="px-3 py-1 rounded text-xs font-medium transition-all duration-200 text-gray-600 hover:text-gray-800"
+                        class="btn-small text-gray-600 hover:text-gray-800 bg-transparent border-0"
                     >
                         V1
                     </button>
                     <button 
                         id="v2-btn"
                         onclick="switchVersion('v2')"
-                        class="px-3 py-1 rounded text-xs font-medium transition-all duration-200 bg-custom-blue text-white"
+                        class="btn-small btn-small-primary"
                     >
                         V2
                     </button>
