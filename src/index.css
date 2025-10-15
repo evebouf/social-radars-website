@@ -221,18 +221,33 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content {
     position: relative;
     z-index: 10;
-    text-align: center;
     color: white;
-    padding: 0 1.5rem;
-    max-width: 56rem;
-    margin: 0 auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hero-headline-container {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+}
+
+.hero-description-container {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    text-align: right;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
     line-height: 0.9;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -250,19 +265,71 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.hero-description {
-    font-size: 1.125rem;
-    margin-bottom: 3rem;
-    color: rgba(255, 255, 255, 1);
-    max-width: 42rem;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.2s;
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 0.9;
+    margin: 0;
 }
 
-.hero-button-container {
-    display: flex;
-    justify-content: center;
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 36rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-description {
+        font-size: 1.125rem;
+        /* max-width: 24rem; */
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.25rem;
+        /* max-width: full; */
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .hero-headline-container {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: center;
+    }
+    
+    .hero-description-container {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        max-width: none;
+    }
 }
 
 .hero-button-content {
