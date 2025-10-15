@@ -1,0 +1,96 @@
+import React from 'react';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">The Social Radars</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Unfiltered conversations with the founders who shaped Silicon Valley. 
+              Jessica Livingston and Carolynn Levy bring you insights you won't hear anywhere else.
+            </p>
+          </div>
+          
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#episodes" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  Episodes
+                </a>
+              </li>
+              <li>
+                <a href="#hosts" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  Meet the Hosts
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  Subscribe
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Listen On */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Listen On</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  Apple Podcasts
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  Spotify
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  Google Podcasts
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                  RSS Feed
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 mb-4 md:mb-0">
+              © 2025 The Social Radars. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
