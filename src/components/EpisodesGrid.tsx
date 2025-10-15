@@ -52,7 +52,7 @@ const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes, showAll = false, 
   };
 
   return (
-    <section className="episodes-section">
+    <section id="episodes" className="episodes-section">
       <div className="episodes-container">
         <div className="episodes-header">
           <h2 className="episodes-title">Latest Episodes</h2>
