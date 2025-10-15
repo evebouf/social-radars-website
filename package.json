@@ -1,6 +1,7 @@
 {
   "name": "social-radars-podcast",
   "version": "1.0.0",
+  "type": "module",
   "description": "The Social Radars podcast website",
   "main": "index.js",
   "scripts": {
