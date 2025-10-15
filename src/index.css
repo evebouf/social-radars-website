@@ -13,17 +13,16 @@ h1, h2, h3, h4, h5, h6 {
     font-display: swap;
 }
 
+.font-clash-display {
+    font-family: 'Clash Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-display: swap;
+}
+
 .hero-bg {
     background-image: url('/images/jessica-hero-image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* margin: 2.5rem; */
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    border-radius: 2rem;
     height: 95vh;
     position: relative;
 }
@@ -36,13 +35,48 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
-    border-radius: 2rem;
     z-index: 1;
 }
 
 .episode-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     transition: all 0.3s ease;
+}
+
+/* Episode hover overlay */
+.episode-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.episode-card:hover .episode-hover-overlay {
+    opacity: 1;
+}
+
+.episode-hover-play {
+    color: white;
+    background: rgba(224, 41, 43, 0.9);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.episode-card:hover .episode-hover-play {
+    transform: scale(1);
 }
 
 /* Button System - Consistent with V1 */
@@ -239,8 +273,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero-description-container {
     grid-column: 2;
     grid-row: 2;
-    align-self: end;
+    align-self: center;
     text-align: right;
+    max-width: 28rem;
+    margin-left: auto;
 }
 
 .hero-title {
@@ -302,12 +338,33 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Tablet optimization */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .episodes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .episode-card {
+        max-width: none;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        max-width: 22rem;
+    }
+}
+
 @media (max-width: 767px) {
     .hero-content {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto;
-        gap: 1rem;
-        padding: 1rem;
+        grid-template-rows: 1fr auto auto;
+        gap: 0.5rem;
+        padding: 0.75rem;
     }
     
     .hero-headline-container {
@@ -318,18 +375,60 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-description-container {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 3;
         text-align: center;
+        margin-left: 0;
+        max-width: none;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 1.75rem;
+        line-height: 1.1;
     }
     
     .hero-description {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         max-width: none;
+        line-height: 1.3;
     }
+    
+    /* Mobile hero image optimization */
+    .hero-bg {
+        height: 60vh;
+        background-position: center top;
+        margin: 0.75rem;
+        border-radius: 1rem;
+    }
+    
+    /* Episodes grid mobile optimization */
+    .episodes-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .episode-card {
+        max-width: none;
+        width: 100%;
+    }
+    
+    .episode-name {
+        font-size: 1.125rem;
+    }
+    
+    .episode-title {
+        font-size: 0.875rem;
+    }
+    
+    .episode-description {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}
+
+/* Mobile navbar optimization */
+@media (max-width: 767px) {
+    /* Hero margins removed for simplicity */
 }
 
 .hero-button-content {

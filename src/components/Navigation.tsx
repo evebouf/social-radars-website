@@ -28,25 +28,27 @@ const Navigation: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white shadow-lg border-b border-gray-200' 
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className={`transition-all duration-300 flex justify-between items-center h-16 ${
+          isScrolled 
+            ? 'mx-6 mt-2 rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg px-6' 
+            : 'mt-6'
+        }`}>
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 ml-8">
             <a href="#" className="text-xl font-bold">
-              <span className={isScrolled ? 'text-gray-900' : 'text-white'}>
+              <span className={`font-clash-display ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}>
                 The Social Radars
               </span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <a 
               href="#episodes" 
               className={`font-medium transition-colors duration-200 hover:text-red-600 ${
@@ -71,7 +73,7 @@ const Navigation: React.FC = () => {
             >
               Meet the Hosts
             </a>
-            <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 shadow-sm">
               Listen Now
             </button>
           </div>

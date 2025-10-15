@@ -56,9 +56,6 @@ const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes, showAll = false, 
       <div className="episodes-container">
         <div className="episodes-header">
           <h2 className="episodes-title">Latest Episodes</h2>
-          <p className="episodes-subtitle">
-            Deep conversations with the founders who shaped Silicon Valley
-          </p>
           
           {/* Season Filter */}
           <div className="season-filters">
