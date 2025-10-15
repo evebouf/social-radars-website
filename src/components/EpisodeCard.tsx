@@ -39,13 +39,13 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
             <span className="episode-season">{seasonDisplay}</span>
           )}
           <div className="episode-buttons">
+            {episode.hasTranscript && (
+              <button className="btn-transcript">Transcript</button>
+            )}
             {episode.hasAudio && (
               <button className="btn-small btn-small-primary">
                 Listen now
               </button>
-            )}
-            {episode.hasTranscript && (
-              <button className="btn-transcript">Transcript</button>
             )}
           </div>
         </div>
