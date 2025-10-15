@@ -1,7 +1,53 @@
+// Episode Card Component
+function createEpisodeCard(episode) {
+    const imageClass = episode.imagePosition === 'top' ? 'episode-image-top' : '';
+    const seasonDisplay = episode.seasonLabel || `Season ${episode.season}`;
+    
+    return `
+        <div class="episode-card" data-season="${episode.season}">
+            <div class="episode-image">
+                <img src="${episode.image}" alt="${episode.name}" class="${imageClass}">
+            </div>
+            <div class="episode-content">
+                <h3 class="episode-name">${episode.name}</h3>
+                <p class="episode-title">${episode.title}</p>
+                <p class="episode-description">${episode.description}</p>
+                <div class="episode-footer">
+                    ${episode.seasonLabel ? `<span class="episode-season">${seasonDisplay}</span>` : ''}
+                    <div class="episode-buttons">
+                        ${episode.hasAudio ? '<button class="btn-small btn-small-primary">Listen now</button>' : ''}
+                        ${episode.hasTranscript ? '<button class="btn-transcript">Transcript</button>' : ''}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Generate episodes grid
+function generateEpisodesGrid() {
+    const episodesGrid = document.querySelector('.episodes-grid');
+    if (!episodesGrid) return;
+    
+    // Sort episodes by season (descending) and then by order within season
+    const sortedEpisodes = episodesData.sort((a, b) => {
+        if (a.season !== b.season) {
+            return b.season - a.season; // Newer seasons first
+        }
+        return 0; // Keep original order within season
+    });
+    
+    // Generate HTML for all episodes
+    const episodesHTML = sortedEpisodes.map(episode => createEpisodeCard(episode)).join('');
+    episodesGrid.innerHTML = episodesHTML;
+}
+
 // Season filter functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Generate episodes first
+    generateEpisodesGrid();
+    
     const filterButtons = document.querySelectorAll('.season-filter');
-    const episodeCards = document.querySelectorAll('.episode-card');
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -9,14 +55,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update active button
             filterButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-custom-blue', 'text-white');
-                btn.classList.add('bg-gray-100', 'text-gray-700');
+                btn.classList.remove('active', 'btn-small-primary');
+                btn.classList.add('season-filter-inactive');
             });
             
-            this.classList.add('active', 'bg-custom-blue', 'text-white');
-            this.classList.remove('bg-gray-100', 'text-gray-700');
+            this.classList.add('active', 'btn-small-primary');
+            this.classList.remove('season-filter-inactive');
             
             // Filter episodes
+            const episodeCards = document.querySelectorAll('.episode-card');
             episodeCards.forEach(card => {
                 const cardSeason = card.getAttribute('data-season');
                 

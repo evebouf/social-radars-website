@@ -39,3 +39,6 @@ logs
 # Cache
 .cache/
 .parcel-cache/
+
+# Images (temporarily excluded)
+images/
