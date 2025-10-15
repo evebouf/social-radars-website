@@ -7,7 +7,19 @@ interface EpisodeCardProps {
 
 const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
   const imageClass = episode.imagePosition === 'top' ? 'episode-image-top' : '';
-  const seasonDisplay = episode.seasonLabel || `Season ${episode.season}`;
+  
+  // Determine season display logic
+  const getSeasonDisplay = () => {
+    if (episode.seasonLabel === 'Founder Mode') {
+      return null; // Don't show season for Founder Mode
+    }
+    if (episode.seasonLabel) {
+      return episode.seasonLabel; // Use custom label if provided
+    }
+    return `S${episode.season}`; // Use S-Z-N format for regular seasons
+  };
+  
+  const seasonDisplay = getSeasonDisplay();
 
   return (
     <div className="episode-card" data-season={episode.season}>
@@ -23,7 +35,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
         <p className="episode-title">{episode.title}</p>
         <p className="episode-description">{episode.description}</p>
         <div className="episode-footer">
-          {episode.seasonLabel && (
+          {seasonDisplay && (
             <span className="episode-season">{seasonDisplay}</span>
           )}
           <div className="episode-buttons">

@@ -4,9 +4,11 @@ import EpisodeCard from './EpisodeCard';
 
 interface EpisodesGridProps {
   episodes: Episode[];
+  showAll?: boolean;
+  onViewAll?: () => void;
 }
 
-const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes }) => {
+const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes, showAll = false, onViewAll }) => {
   const [selectedSeason, setSelectedSeason] = useState<string>('all');
 
   // Get unique seasons for filter buttons
@@ -17,24 +19,33 @@ const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes }) => {
 
   // Filter episodes based on selected season
   const filteredEpisodes = useMemo(() => {
+    let episodesToShow = episodes;
+    
     if (selectedSeason === 'all') {
-      return episodes.sort((a, b) => {
+      episodesToShow = episodes.sort((a, b) => {
         if (a.season !== b.season) {
           return b.season - a.season; // Newer seasons first
         }
         return 0; // Keep original order within season
       });
+    } else {
+      episodesToShow = episodes
+        .filter(episode => episode.season.toString() === selectedSeason)
+        .sort((a, b) => {
+          if (a.season !== b.season) {
+            return b.season - a.season;
+          }
+          return 0;
+        });
     }
     
-    return episodes
-      .filter(episode => episode.season.toString() === selectedSeason)
-      .sort((a, b) => {
-        if (a.season !== b.season) {
-          return b.season - a.season;
-        }
-        return 0;
-      });
-  }, [episodes, selectedSeason]);
+    // If not showing all episodes, limit to last 6
+    if (!showAll) {
+      episodesToShow = episodesToShow.slice(0, 6);
+    }
+    
+    return episodesToShow;
+  }, [episodes, selectedSeason, showAll]);
 
   const handleSeasonFilter = (season: string) => {
     setSelectedSeason(season);
@@ -83,11 +94,16 @@ const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes }) => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
-          <button className="btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-300">
-            View All Episodes
-          </button>
-        </div>
+        {!showAll && onViewAll && (
+          <div className="text-center mt-12">
+            <button 
+              className="btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-300"
+              onClick={onViewAll}
+            >
+              View All Episodes
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
