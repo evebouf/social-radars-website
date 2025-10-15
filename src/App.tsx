@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import EpisodesGrid from './components/EpisodesGrid';
+import Testimonials from './components/Testimonials';
 import Quote from './components/Quote';
 import Hosts from './components/Hosts';
 import About from './components/About';
@@ -34,9 +35,10 @@ const App: React.FC = () => {
         showAll={false}
         onViewAll={handleViewAllEpisodes}
       />
-      <Quote />
+      <Testimonials />
       <Hosts />
       <About />
+      <Quote />
       <Footer />
     </div>
   );
