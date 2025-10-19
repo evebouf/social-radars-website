@@ -30,17 +30,17 @@ const Navigation: React.FC = () => {
     <nav 
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`transition-all duration-300 flex justify-between items-center h-16 ${
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className={`transition-all duration-300 flex justify-between items-center h-16 rounded-2xl ${
           isScrolled 
-            ? 'mx-6 mt-2 rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg px-6' 
-            : 'mt-6'
+            ? 'mx-6 mt-2 bg-white/20 backdrop-blur-md shadow-lg px-6' 
+            : 'mt-4 mx-6 px-6'
         }`}>
           {/* Logo */}
-          <div className="flex-shrink-0 ml-8">
+          <div className="flex-shrink-0">
             <a href="#" className="text-xl font-bold">
               <span className={`font-clash-display ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                isScrolled ? 'text-gray-800' : 'text-white'
               }`}>
                 The Social Radars
               </span>
@@ -52,7 +52,7 @@ const Navigation: React.FC = () => {
             <a 
               href="#episodes" 
               className={`font-medium transition-colors duration-200 hover:text-red-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+                isScrolled ? 'text-gray-800' : 'text-white'
               }`}
               onClick={(e) => {
                 e.preventDefault();
@@ -64,7 +64,7 @@ const Navigation: React.FC = () => {
             <a 
               href="#hosts" 
               className={`font-medium transition-colors duration-200 hover:text-red-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+                isScrolled ? 'text-gray-800' : 'text-white'
               }`}
               onClick={(e) => {
                 e.preventDefault();
@@ -73,9 +73,9 @@ const Navigation: React.FC = () => {
             >
               Meet the Hosts
             </a>
-            <button className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 shadow-sm">
-              Listen Now
-            </button>
+                    <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-200">
+                      Listen Now
+                    </a>
           </div>
 
           {/* Mobile menu button */}
@@ -124,9 +124,9 @@ const Navigation: React.FC = () => {
                 Meet the Hosts
               </a>
               <div className="px-3 py-2">
-                <button className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200">
-                  Listen Now
-                </button>
+                        <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 inline-block text-center">
+                          Listen Now
+                        </a>
               </div>
             </div>
           </div>

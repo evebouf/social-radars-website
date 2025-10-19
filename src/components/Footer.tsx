@@ -2,16 +2,18 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="text-white py-16" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">The Social Radars</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Unfiltered conversations with the founders who shaped Silicon Valley. 
-              Jessica Livingston and Carolynn Levy bring you insights you won't hear anywhere else.
+              Jessica Livingston and Carolynn Levy sit with Silicon Valley's most successful founders to uncover the real stories of how they did it.
             </p>
+            <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-8 py-3 inline-block">
+              Listen Now
+            </a>
           </div>
           
           {/* Quick Links */}

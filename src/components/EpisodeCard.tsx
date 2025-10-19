@@ -29,11 +29,12 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
           alt={episode.name} 
           className={imageClass}
         />
-        {/* Glass play button overlay */}
-        <div className="episode-glass-overlay">
-          <div className="episode-glass-play">
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+        {/* Simple listen overlay */}
+        <div className="episode-listen-overlay">
+          <div className="episode-listen-text">
+            <span>Listen</span>
+            <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z"/>
             </svg>
           </div>
         </div>

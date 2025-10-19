@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         'outfit': ['Outfit', 'sans-serif'],
         'clash': ['Clash Display', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
       },
       colors: {
         'custom-red': '#E0292B',
