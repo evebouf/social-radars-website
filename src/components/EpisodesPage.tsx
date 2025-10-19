@@ -16,7 +16,7 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes, onBackToHome }) =
       
       <main>
         {/* Page Header */}
-        <section className="py-16 bg-gradient-to-b from-amber-50 to-white">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">

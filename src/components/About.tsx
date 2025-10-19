@@ -2,14 +2,14 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <section id="about" className="py-24 bg-gray-50">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-20">
           <div className="inline-block">
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Why Social Radars
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-300 to-amber-400 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-gray-400 mx-auto mb-8"></div>
           </div>
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
             Jessica and Carolynn see potential in founders before anyone else does. 
@@ -17,20 +17,8 @@ const About: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="bg-white rounded-2xl p-6 border border-gray-100">
-              <div className="flex items-center mb-4">
-                <div className="w-2 h-2 bg-amber-300 rounded-full mr-2"></div>
-                <h3 className="text-2xl font-bold text-gray-900">The Art of Seeing Potential Before Anyone Else</h3>
-              </div>
-              <p className="text-lg text-gray-600 leading-relaxed font-light">
-                While others see college dropouts and crazy ideas, they see the patterns that predict success.
-              </p>
-            </div>
-          </div>
-          
-          <div className="order-1 lg:order-2 lg:col-span-2">
+        <div className="grid grid-cols-1 gap-12 items-center">
+          <div>
             {/* Haphazard scrapbook-style photo gallery */}
             <div className="relative h-[600px] w-full">
               {/* First Batch - Slightly off-center top */}

@@ -6,12 +6,11 @@ const Hosts: React.FC = () => {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet the Hosts</h2>
-          <p className="text-lg text-gray-600">The voices behind The Social Radars podcast</p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           {/* Jessica Livingston */}
-          <div className="bg-gray-50 rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+          <div className="bg-gray-50 rounded-3xl  overflow-hidden border border-gray-100">
             <div className="p-10">
               <div className="text-center mb-8">
                 <div className="inline-block">
@@ -34,7 +33,7 @@ const Hosts: React.FC = () => {
           </div>
 
           {/* Carolynn Levy */}
-          <div className="bg-gray-50 rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+          <div className="bg-gray-50 rounded-3xl  overflow-hidden border border-gray-100">
             <div className="p-10">
               <div className="text-center mb-8">
                 <div className="inline-block">

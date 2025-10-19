@@ -47,7 +47,7 @@ const Testimonials: React.FC = () => {
                 <span className="mx-1">•</span>
                 <span>{testimonial.source}</span>
               </div>
-              <div className="text-yellow-500 text-lg">
+              <div className="text-gray-400 text-lg">
                 {renderStars(testimonial.rating)}
               </div>
             </div>

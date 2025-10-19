@@ -29,10 +29,10 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
           alt={episode.name} 
           className={imageClass}
         />
-        {/* Hover overlay with play button */}
-        <div className="episode-hover-overlay">
-          <div className="episode-hover-play">
-            <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+        {/* Glass play button overlay */}
+        <div className="episode-glass-overlay">
+          <div className="episode-glass-play">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z"/>
             </svg>
           </div>

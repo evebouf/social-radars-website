@@ -94,7 +94,7 @@ const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes, showAll = false, 
         {!showAll && onViewAll && (
           <div className="text-center mt-12">
             <button 
-              className="btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-300"
+              className="btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-300"
               onClick={onViewAll}
             >
               View All Episodes

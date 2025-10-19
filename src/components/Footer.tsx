@@ -19,22 +19,22 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#episodes" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#episodes" className="text-gray-300 hover:text-red-400 transition-colors">
                   Episodes
                 </a>
               </li>
               <li>
-                <a href="#hosts" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#hosts" className="text-gray-300 hover:text-red-400 transition-colors">
                   Meet the Hosts
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#about" className="text-gray-300 hover:text-red-400 transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                   Subscribe
                 </a>
               </li>
@@ -46,22 +46,22 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Listen On</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                   Apple Podcasts
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                   Spotify
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                   Google Podcasts
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-amber-300 transition-colors">
+                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
                   RSS Feed
                 </a>
               </li>
@@ -76,13 +76,13 @@ const Footer: React.FC = () => {
               © 2025 The Social Radars. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
                 Contact
               </a>
             </div>
