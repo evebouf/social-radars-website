@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+// Navigation component for The Social Radars podcast
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
