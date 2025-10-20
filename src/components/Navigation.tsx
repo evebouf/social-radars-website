@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isEpisodesPage, setIsEpisodesPage] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +16,7 @@ const Navigation: React.FC = () => {
     };
 
     const handleRouteChange = () => {
-      const path = window.location.pathname;
-      setIsEpisodesPage(path === '/episodes');
+      // Route change handler - currently not needed
     };
 
     window.addEventListener('scroll', handleScroll);
