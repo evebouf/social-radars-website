@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import EpisodesGrid from './components/EpisodesGrid';
@@ -16,6 +16,8 @@ const App: React.FC = () => {
 
   const handleViewAllEpisodes = () => {
     setCurrentPage('episodes');
+    // Scroll to top when navigating to episodes page
+    window.scrollTo(0, 0);
   };
 
   const handleBackToHome = () => {

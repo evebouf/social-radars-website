@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Episode } from '../types/episodes';
 import EpisodesGrid from './EpisodesGrid';
 import Navigation from './Navigation';
@@ -10,13 +10,18 @@ interface EpisodesPageProps {
 }
 
 const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes, onBackToHome }) => {
+  // Ensure page starts at top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
       <main>
         {/* Page Header */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-5xl font-bold text-gray-900 mb-6">
