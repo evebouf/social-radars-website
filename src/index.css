@@ -87,6 +87,40 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(0);
 }
 
+/* Glass effect play button overlay */
+.episode-glass-overlay {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.episode-glass-play {
+    background: #E0292B;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.episode-card:hover .episode-glass-overlay {
+    opacity: 1;
+}
+
+.episode-card:hover .episode-glass-play {
+    transform: scale(1);
+    opacity: 1;
+}
+
 /* Button System - Consistent with V1 */
 .btn-primary {
     background-color: #E0292B;
@@ -174,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link:hover {
     color: #E0292B !important;
+    text-decoration: underline;
 }
 
 .nav-link .underline-effect {
@@ -281,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-description-container {
     grid-column: 2;
     grid-row: 2;
-    align-self: center;
+    align-self: end;
     text-align: right;
     max-width: 28rem;
     margin-left: auto;
@@ -338,6 +373,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
     .hero-title {
         font-size: 4.5rem;
+        padding-right: 2rem;
     }
     
     .hero-description {
@@ -504,14 +540,15 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .episode-buttons {
-        gap: 1rem !important;
-        flex-direction: column;
+        gap: 0.5rem !important;
+        flex-direction: row;
     }
     
     .btn-small, .btn-transcript {
-        padding: 1rem 2rem !important;
-        font-size: 1rem !important;
-        width: 100%;
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        width: auto;
+        flex: 1;
         text-align: center;
     }
 

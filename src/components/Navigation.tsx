@@ -7,7 +7,11 @@ const Navigation: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
+      const heroSection = document.getElementById('hero') || document.querySelector('.hero-section');
+      const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+      
+      // Only show background when we've scrolled past the hero section
+      setIsScrolled(scrollPosition > heroHeight - 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -33,8 +37,8 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className={`transition-all duration-300 flex justify-between items-center h-16 rounded-2xl ${
           isScrolled 
-            ? 'mx-4 mt-2 bg-white/20 backdrop-blur-xl shadow-lg px-4 border border-white/30' 
-            : 'mt-4 mx-4 px-4'
+            ? 'mx-4 mt-2 bg-white/95 backdrop-blur-sm shadow-lg px-4 border border-white' 
+            : 'mt-4 mx-4 px-4 border border-white'
         }`}>
           {/* Logo */}
           <div className="flex-shrink-0">

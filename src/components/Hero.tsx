@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero-bg hero-section">
+    <section id="hero" className="hero-bg hero-section">
       <div className="hero-content">
         {/* Bottom Left - Headline */}
         <div className="hero-headline-container">

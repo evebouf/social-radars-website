@@ -21,14 +21,33 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
   
   const seasonDisplay = getSeasonDisplay();
 
+  // Handle card click - open the audio URL if available
+  const handleCardClick = () => {
+    if (episode.hasAudio && episode.audioUrl) {
+      window.open(episode.audioUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <div className="episode-card cursor-pointer" data-season={episode.season}>
+    <div 
+      className="episode-card cursor-pointer" 
+      data-season={episode.season}
+      onClick={handleCardClick}
+    >
       <div className="episode-image relative overflow-hidden">
         <img 
           src={episode.image} 
           alt={episode.name} 
           className={imageClass}
         />
+        {/* Glass effect play button overlay */}
+        <div className="episode-glass-overlay">
+          <div className="episode-glass-play">
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
       </div>
       <div className="episode-content">
         <h3 className="episode-name">{episode.name}</h3>
@@ -45,6 +64,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-transcript"
+                onClick={(e) => e.stopPropagation()}
               >
                 Transcript
               </a>
@@ -55,6 +75,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-small btn-small-primary episode-listen-btn"
+                onClick={(e) => e.stopPropagation()}
               >
                 <span>Listen now</span>
                 <svg className="episode-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
