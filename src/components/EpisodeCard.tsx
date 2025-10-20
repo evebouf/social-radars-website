@@ -39,16 +39,28 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
             <span className="episode-season">{seasonDisplay}</span>
           )}
           <div className="episode-buttons">
-            {episode.hasTranscript && (
-              <button className="btn-transcript">Transcript</button>
+            {episode.hasTranscript && episode.transcriptUrl && (
+              <a 
+                href={episode.transcriptUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-transcript"
+              >
+                Transcript
+              </a>
             )}
-            {episode.hasAudio && (
-              <button className="btn-small btn-small-primary episode-listen-btn">
+            {episode.hasAudio && episode.audioUrl && (
+              <a 
+                href={episode.audioUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-small btn-small-primary episode-listen-btn"
+              >
                 <span>Listen now</span>
                 <svg className="episode-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
+              </a>
             )}
           </div>
         </div>
