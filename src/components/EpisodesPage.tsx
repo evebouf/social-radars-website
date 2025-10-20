@@ -50,22 +50,15 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
               {/* <p className="episodes-hero-description">
                 Complete archive of conversations with Silicon Valley's most successful founders
               </p> */}
-            </div>
-          </div>
-        </section>
-        
-        {/* Season Filter Section */}
-        <section className="py-4 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+              
               {/* Season Filter Pills */}
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 px-4">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8 px-4 max-w-4xl mx-auto">
                 <button
                   onClick={() => setSelectedSeason('all')}
                   className={`px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 ${
                     selectedSeason === 'all'
-                      ? 'bg-red-600 text-white'
-                      : 'border border-red-600 text-red-600 hover:bg-red-600 hover:text-white'
+                      ? 'bg-white text-red-600'
+                      : 'border border-white text-white hover:bg-white hover:text-red-600'
                   }`}
                 >
                   All Seasons
@@ -76,8 +69,8 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
                     onClick={() => setSelectedSeason(season)}
                     className={`px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 ${
                       selectedSeason === season
-                        ? 'bg-red-600 text-white'
-                        : 'border border-red-600 text-red-600 hover:bg-red-600 hover:text-white'
+                        ? 'bg-white text-red-600'
+                        : 'border border-white text-white hover:bg-white hover:text-red-600'
                     }`}
                   >
                     Season {season}
@@ -87,6 +80,7 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
             </div>
           </div>
         </section>
+        
 
         {/* All Episodes Grid */}
         <EpisodesGrid episodes={filteredEpisodes} showAll={true} />

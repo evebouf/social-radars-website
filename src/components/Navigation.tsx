@@ -55,7 +55,7 @@ const Navigation: React.FC = () => {
             : 'mt-4 mx-4 px-4 border border-white'
         }`}>
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 pl-4">
             <a href="/" className="text-lg md:text-xl font-bold">
               <span className={`font-clash-display ${
                 isScrolled ? 'text-gray-700' : 'text-white'
