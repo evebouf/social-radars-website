@@ -29,15 +29,6 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
           alt={episode.name} 
           className={imageClass}
         />
-        {/* Simple listen overlay */}
-        <div className="episode-listen-overlay">
-          <div className="episode-listen-text">
-            <span>Listen</span>
-            <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z"/>
-            </svg>
-          </div>
-        </div>
       </div>
       <div className="episode-content">
         <h3 className="episode-name">{episode.name}</h3>
@@ -52,8 +43,11 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
               <button className="btn-transcript">Transcript</button>
             )}
             {episode.hasAudio && (
-              <button className="btn-small btn-small-primary">
-                Listen now
+              <button className="btn-small btn-small-primary episode-listen-btn">
+                <span>Listen now</span>
+                <svg className="episode-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </button>
             )}
           </div>

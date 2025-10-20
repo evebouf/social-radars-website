@@ -33,12 +33,12 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className={`transition-all duration-300 flex justify-between items-center h-16 rounded-2xl ${
           isScrolled 
-            ? 'mx-6 mt-2 bg-white/20 backdrop-blur-md shadow-lg px-6' 
-            : 'mt-4 mx-6 px-6'
+            ? 'mx-4 mt-2 bg-white/20 backdrop-blur-md shadow-lg px-4' 
+            : 'mt-4 mx-4 px-4'
         }`}>
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-xl font-bold">
+            <a href="#" className="text-lg md:text-xl font-bold">
               <span className={`font-clash-display ${
                 isScrolled ? 'text-gray-800' : 'text-white'
               }`}>
@@ -84,8 +84,8 @@ const Navigation: React.FC = () => {
               onClick={toggleMobileMenu}
               className={`p-2 rounded-md transition-colors duration-200 ${
                 isScrolled 
-                  ? 'text-gray-700 hover:text-red-600' 
-                  : 'text-white hover:text-red-200'
+                  ? 'text-gray-700' 
+                  : 'text-white'
               }`}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -102,10 +102,10 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200 shadow-lg">
+            <div className="px-4 pt-4 pb-6 space-y-3 bg-white/95 backdrop-blur-md border-t border-white/20 shadow-lg mx-4 rounded-b-2xl">
               <a 
                 href="#episodes" 
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                className="block px-4 py-3 text-lg font-medium text-gray-800 hover:text-red-600 hover:bg-gray-50 rounded-lg transition-colors duration-200"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection('episodes');
@@ -115,7 +115,7 @@ const Navigation: React.FC = () => {
               </a>
               <a 
                 href="#hosts" 
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                className="block px-4 py-3 text-lg font-medium text-gray-800 hover:text-red-600 hover:bg-gray-50 rounded-lg transition-colors duration-200"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection('hosts');
@@ -123,10 +123,10 @@ const Navigation: React.FC = () => {
               >
                 Meet the Hosts
               </a>
-              <div className="px-3 py-2">
-                        <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 inline-block text-center">
-                          Listen Now
-                        </a>
+              <div className="px-4 py-2">
+                <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-200 inline-block text-center">
+                  Listen Now
+                </a>
               </div>
             </div>
           </div>

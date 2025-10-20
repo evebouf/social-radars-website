@@ -2,7 +2,7 @@ import React from 'react';
 
 const Quote: React.FC = () => {
   return (
-    <section className="py-20 text-white" style={{ backgroundColor: '#1a1a1a' }}>
+    <section className="quote-section py-20 text-white" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <blockquote className="text-3xl md:text-4xl font-bold text-white leading-relaxed mb-8">

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Episode } from '../types/episodes';
 import EpisodeCard from './EpisodeCard';
 
@@ -9,35 +9,14 @@ interface EpisodesGridProps {
 }
 
 const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes, showAll = false, onViewAll }) => {
-  const [selectedSeason, setSelectedSeason] = useState<string>('all');
-
-  // Get unique seasons for filter buttons
-  const seasons = useMemo(() => {
-    const uniqueSeasons = [...new Set(episodes.map(ep => ep.season))];
-    return uniqueSeasons.sort((a, b) => b - a); // Newest seasons first
-  }, [episodes]);
-
-  // Filter episodes based on selected season
+  // Show latest episodes sorted by season (newest first)
   const filteredEpisodes = useMemo(() => {
-    let episodesToShow = episodes;
-    
-    if (selectedSeason === 'all') {
-      episodesToShow = episodes.sort((a, b) => {
-        if (a.season !== b.season) {
-          return b.season - a.season; // Newer seasons first
-        }
-        return 0; // Keep original order within season
-      });
-    } else {
-      episodesToShow = episodes
-        .filter(episode => episode.season.toString() === selectedSeason)
-        .sort((a, b) => {
-          if (a.season !== b.season) {
-            return b.season - a.season;
-          }
-          return 0;
-        });
-    }
+    let episodesToShow = episodes.sort((a, b) => {
+      if (a.season !== b.season) {
+        return b.season - a.season; // Newer seasons first
+      }
+      return 0; // Keep original order within season
+    });
     
     // If not showing all episodes, limit to last 6
     if (!showAll) {
@@ -45,47 +24,18 @@ const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes, showAll = false, 
     }
     
     return episodesToShow;
-  }, [episodes, selectedSeason, showAll]);
-
-  const handleSeasonFilter = (season: string) => {
-    setSelectedSeason(season);
-  };
+  }, [episodes, showAll]);
 
   return (
-    <section id="episodes" className="py-20 bg-white">
+    <section id="episodes" className="episodes-section py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="episodes-header">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-4">Latest Episodes</h2>
+        {!showAll && (
+          <div className="episodes-header">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold text-gray-900 mb-4">Latest Episodes</h2>
+            </div>
           </div>
-          
-          {/* Season Filter */}
-          <div className="season-filters">
-            <button 
-              className={`season-filter btn-small ${
-                selectedSeason === 'all' 
-                  ? 'active btn-small-primary' 
-                  : 'season-filter-inactive'
-              }`}
-              onClick={() => handleSeasonFilter('all')}
-            >
-              All Seasons
-            </button>
-            {seasons.map(season => (
-              <button
-                key={season}
-                className={`season-filter btn-small ${
-                  selectedSeason === season.toString()
-                    ? 'active btn-small-primary'
-                    : 'season-filter-inactive'
-                }`}
-                onClick={() => handleSeasonFilter(season.toString())}
-              >
-                Season {season}
-              </button>
-            ))}
-          </div>
-        </div>
+        )}
         
         <div className="episodes-grid">
           {filteredEpisodes.map(episode => (

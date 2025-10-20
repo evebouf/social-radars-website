@@ -48,35 +48,41 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
-/* Episode hover effect - subtle glass play button */
-.episode-card:hover {
-    transition: all 0.3s ease;
-}
-
-/* Simple listen overlay */
-.episode-listen-overlay {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.episode-card:hover .episode-listen-overlay {
-    opacity: 1;
-}
-
-.episode-listen-text {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 500;
+/* Episode listen button with hover arrow */
+.episode-listen-btn {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 4px;
-    backdrop-filter: blur(8px);
+    justify-content: center;
+    transition: all 0.2s ease;
+    min-width: fit-content;
+}
+
+.episode-listen-btn span {
+    transition: transform 0.2s ease;
+}
+
+.episode-arrow {
+    position: absolute;
+    right: 0.75rem;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.2s ease;
+}
+
+.episode-card:hover .episode-listen-btn {
+    padding-right: 2rem;
+}
+
+.episode-card:hover .episode-listen-btn span {
+    transform: translateX(-4px);
+}
+
+.episode-card:hover .episode-arrow {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Button System - Consistent with V1 */
@@ -120,12 +126,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-small-primary {
-    background-color: #E0292B;
-    color: white;
+    background-color: transparent;
+    color: #E0292B;
+    border: 1px solid #E0292B;
 }
 
 .btn-small-primary:hover {
-    background-color: #C21E21;
+    background-color: #E0292B;
+    color: white;
 }
 
 .btn-small-secondary {
@@ -357,12 +365,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Mobile Optimization */
 @media (max-width: 767px) {
+    /* Hero Section Mobile */
     .hero-content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto auto;
-        gap: 0.5rem;
-        padding: 0.75rem;
+        gap: 1rem;
+        padding: 1rem;
     }
     
     .hero-headline-container {
@@ -380,29 +390,56 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 2.5rem;
         line-height: 1.1;
     }
     
     .hero-description {
-        font-size: 0.85rem;
+        font-size: 1rem;
         max-width: none;
-        line-height: 1.3;
+        line-height: 1.4;
     }
     
     /* Mobile hero image optimization */
     .hero-bg {
-        height: 60vh;
-        background-position: center top;
-        margin: 0.75rem;
+        height: 70vh;
+        background-position: center center;
+        margin: 0.5rem;
         border-radius: 1rem;
+    }
+
+    /* Episodes Section Mobile */
+    .episodes-section {
+        padding: 3rem 1rem !important;
+    }
+    
+    .episodes-title {
+        font-size: 2.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .episodes-subtitle {
+        font-size: 1.1rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .season-filters {
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+        margin-bottom: 2rem !important;
+        justify-content: center;
+    }
+    
+    .season-filter {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9rem !important;
     }
     
     /* Episodes grid mobile optimization */
     .episodes-grid {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
-        padding: 0 1rem !important;
+        padding: 0 0.5rem !important;
         max-width: 100% !important;
     }
     
@@ -413,55 +450,150 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .episode-name {
-        font-size: 1.25rem !important;
+        font-size: 1.5rem !important;
         line-height: 1.2 !important;
         margin-bottom: 0.5rem !important;
     }
     
     .episode-title {
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
         margin-bottom: 0.75rem !important;
     }
     
     .episode-description {
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
         line-height: 1.5 !important;
         margin-bottom: 1rem !important;
     }
     
     .episode-buttons {
-        gap: 0.75rem !important;
+        gap: 1rem !important;
+        flex-direction: column;
     }
     
     .btn-small, .btn-transcript {
-        padding: 0.75rem 1.5rem !important;
-        font-size: 0.9rem !important;
+        padding: 1rem 2rem !important;
+        font-size: 1rem !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Testimonials Mobile */
+    .testimonials-section {
+        padding: 3rem 1rem !important;
     }
     
-    /* Episodes section mobile optimization */
-    .episodes-section {
-        padding: 2rem 1rem !important;
+    .testimonials-section h2 {
+        font-size: 2.5rem !important;
+        margin-bottom: 2rem !important;
     }
     
-    .episodes-title {
+    .testimonials-section .grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    
+    .testimonials-section blockquote {
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Hosts Section Mobile */
+    .hosts-section {
+        padding: 3rem 1rem !important;
+    }
+    
+    .hosts-section h2 {
+        font-size: 2.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .hosts-section .space-y-20 {
+        gap: 3rem !important;
+    }
+    
+    .hosts-section .w-96 {
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+    }
+    
+    .hosts-section h3 {
         font-size: 2rem !important;
         margin-bottom: 1rem !important;
     }
     
-    .episodes-subtitle {
+    .hosts-section p {
         font-size: 1rem !important;
-        margin-bottom: 1.5rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* About Section Mobile */
+    .about-section {
+        padding: 3rem 1rem !important;
     }
     
-    .season-filters {
-        flex-wrap: wrap !important;
-        gap: 0.5rem !important;
+    .about-section h2 {
+        font-size: 2.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .about-section p {
+        font-size: 1.1rem !important;
         margin-bottom: 2rem !important;
     }
     
-    .season-filter {
-        padding: 0.5rem 1rem !important;
-        font-size: 0.85rem !important;
+    .about-section .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+        auto-rows: 150px !important;
+    }
+
+    /* Quote Section Mobile */
+    .quote-section {
+        padding: 3rem 1rem !important;
+    }
+    
+    .quote-section blockquote {
+        font-size: 1.5rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .quote-section .text-xl {
+        font-size: 1.1rem !important;
+    }
+
+    /* Footer Mobile */
+    .footer-section {
+        padding: 3rem 1rem !important;
+    }
+    
+    .footer-section .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .footer-section p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .footer-section .btn-primary {
+        padding: 1rem 2rem !important;
+        font-size: 1rem !important;
     }
 }
 

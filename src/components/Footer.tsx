@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="text-white py-16" style={{ backgroundColor: '#1a1a1a' }}>
+    <footer className="footer-section text-white py-16" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
@@ -48,23 +48,18 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Listen On</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
-                  Apple Podcasts
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
+                <a href="https://pod.link/launch?showId=1677066062&platform=spotify" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-red-400 transition-colors">
                   Spotify
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
-                  Google Podcasts
+                <a href="https://pod.link/launch?showId=1677066062&platform=apple" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-red-400 transition-colors">
+                  Apple Podcasts
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-red-400 transition-colors">
-                  RSS Feed
+                <a href="https://pod.link/launch?showId=1677066062&platform=audible" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-red-400 transition-colors">
+                  Audible
                 </a>
               </li>
             </ul>
@@ -77,17 +72,6 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-4 md:mb-0">
               © 2025 The Social Radars. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
-                Contact
-              </a>
-            </div>
           </div>
         </div>
       </div>
