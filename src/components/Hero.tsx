@@ -2,17 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero-section">
-      {/* Responsive hero image using picture element */}
-      <picture className="hero-bg">
-        <source media="(max-width: 767px)" srcSet="/images/jessica-hero-mobile.svg" />
-        <img 
-          src="/images/jessica-hero-image.png" 
-          alt="Jessica Livingston and Carolynn Levy recording The Social Radars podcast"
-          className="hero-bg-image"
-        />
-      </picture>
-      
+    <section className="hero-bg hero-section">
       <div className="hero-content">
         {/* Bottom Left - Headline */}
         <div className="hero-headline-container">

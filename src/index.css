@@ -29,20 +29,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-bg {
-    position: relative;
-    width: 100%;
+    background-image: url('/images/jessica-hero-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 95vh;
-    overflow: hidden;
+    position: relative;
 }
 
-.hero-bg-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.hero-bg::after {
+.hero-bg::before {
     content: '';
     position: absolute;
     top: 0;
@@ -340,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1024px) {
     .hero-title {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
     
     .hero-description {
@@ -371,24 +366,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile Optimization */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     /* Hero Section Mobile */
     .hero-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto auto;
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
         padding: 1rem;
+        height: 100%;
     }
     
     .hero-headline-container {
-        grid-column: 1;
-        grid-row: 2;
         text-align: center;
     }
     
     .hero-description-container {
-        grid-column: 1;
-        grid-row: 3;
         text-align: center;
         margin-left: 0;
         max-width: none;
@@ -405,15 +399,48 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1.4;
     }
     
+    /* Tablet-specific adjustments */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .hero-title {
+            font-size: 3rem;
+            line-height: 1.1;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 28rem;
+            line-height: 1.5;
+        }
+        
+        .hero-content {
+            gap: 2rem;
+        }
+    }
+    
+    /* Medium screen adjustments (600px - 767px) */
+    @media (min-width: 600px) and (max-width: 767px) {
+        .hero-title {
+            font-size: 2.8rem;
+            line-height: 1.1;
+        }
+        
+        .hero-description {
+            font-size: 1.05rem;
+            max-width: 24rem;
+            line-height: 1.4;
+        }
+        
+        .hero-content {
+            gap: 1.75rem;
+        }
+    }
+    
     /* Mobile hero image optimization */
     .hero-bg {
         height: 85vh;
+        background-position: 60% center; /* Focus on the center subjects (the two women) */
         margin: 0.5rem;
         border-radius: 1rem;
-    }
-    
-    .hero-bg-image {
-        object-position: center center;
     }
 
     /* Episodes Section Mobile */

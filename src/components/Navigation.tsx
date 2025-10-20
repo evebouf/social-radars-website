@@ -33,14 +33,14 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className={`transition-all duration-300 flex justify-between items-center h-16 rounded-2xl ${
           isScrolled 
-            ? 'mx-4 mt-2 bg-white/20 backdrop-blur-md shadow-lg px-4' 
+            ? 'mx-4 mt-2 bg-white/20 backdrop-blur-xl shadow-lg px-4 border border-white/30' 
             : 'mt-4 mx-4 px-4'
         }`}>
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#" className="text-lg md:text-xl font-bold">
               <span className={`font-clash-display ${
-                isScrolled ? 'text-gray-800' : 'text-white'
+                isScrolled ? 'text-gray-700' : 'text-white'
               }`}>
                 The Social Radars
               </span>
@@ -52,7 +52,7 @@ const Navigation: React.FC = () => {
             <a 
               href="#episodes" 
               className={`font-medium transition-colors duration-200 hover:text-red-600 ${
-                isScrolled ? 'text-gray-800' : 'text-white'
+                isScrolled ? 'text-gray-600' : 'text-white'
               }`}
               onClick={(e) => {
                 e.preventDefault();
@@ -64,7 +64,7 @@ const Navigation: React.FC = () => {
             <a 
               href="#hosts" 
               className={`font-medium transition-colors duration-200 hover:text-red-600 ${
-                isScrolled ? 'text-gray-800' : 'text-white'
+                isScrolled ? 'text-gray-600' : 'text-white'
               }`}
               onClick={(e) => {
                 e.preventDefault();
@@ -84,7 +84,7 @@ const Navigation: React.FC = () => {
               onClick={toggleMobileMenu}
               className={`p-2 rounded-md transition-colors duration-200 ${
                 isScrolled 
-                  ? 'text-gray-700' 
+                  ? 'text-gray-600' 
                   : 'text-white'
               }`}
             >
