@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Episode } from '../types/episodes';
 
 interface EpisodeCardProps {
@@ -6,6 +6,7 @@ interface EpisodeCardProps {
 }
 
 const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
+  const [imageError, setImageError] = useState(false);
   const imageClass = episode.imagePosition === 'top' ? 'episode-image-top' : '';
   
   // Determine season display logic
@@ -35,11 +36,18 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
       onClick={handleCardClick}
     >
       <div className="episode-image relative overflow-hidden">
-        <img 
-          src={episode.image} 
-          alt={episode.name} 
-          className={imageClass}
-        />
+        {episode.image && !imageError ? (
+          <img 
+            src={episode.image} 
+            alt={episode.name} 
+            className={imageClass}
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="episode-placeholder">
+            <span className="episode-placeholder-text">Coming Soon</span>
+          </div>
+        )}
         {/* Glass effect play button overlay */}
         <div className="episode-glass-overlay">
           <div className="episode-glass-play">

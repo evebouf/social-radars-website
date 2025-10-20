@@ -40,22 +40,32 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
       <Navigation />
       
       <main>
-        {/* Page Header */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-5xl font-bold text-gray-900 mb-8">
+        {/* Hero Section */}
+        <section className="episodes-hero-section">
+          <div className="episodes-hero-content">
+            <div className="episodes-hero-text">
+              <h1 className="episodes-hero-title">
                 All Episodes
               </h1>
-              
+              {/* <p className="episodes-hero-description">
+                Complete archive of conversations with Silicon Valley's most successful founders
+              </p> */}
+            </div>
+          </div>
+        </section>
+        
+        {/* Season Filter Section */}
+        <section className="py-4 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
               {/* Season Filter Pills */}
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 px-4">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 px-4">
                 <button
                   onClick={() => setSelectedSeason('all')}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                  className={`px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 ${
                     selectedSeason === 'all'
                       ? 'bg-red-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'border border-red-600 text-red-600 hover:bg-red-600 hover:text-white'
                   }`}
                 >
                   All Seasons
@@ -64,10 +74,10 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
                   <button
                     key={season}
                     onClick={() => setSelectedSeason(season)}
-                    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    className={`px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 ${
                       selectedSeason === season
                         ? 'bg-red-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        : 'border border-red-600 text-red-600 hover:bg-red-600 hover:text-white'
                     }`}
                   >
                     Season {season}

@@ -121,6 +121,62 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+/* Episode Placeholder */
+.episode-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.episode-placeholder-text {
+    color: #9ca3af;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Episodes Hero Section */
+.episodes-hero-section {
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #E0292B;
+}
+
+.episodes-hero-content {
+    position: relative;
+    z-index: 10;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.episodes-hero-text {
+    text-align: center;
+    max-width: 48rem;
+}
+
+.episodes-hero-title {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0 0 1.5rem 0;
+}
+
+.episodes-hero-description {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.9;
+}
+
 /* Button System - Consistent with V1 */
 .btn-primary {
     background-color: #E0292B;
