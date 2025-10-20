@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
     
     /* Mobile hero image optimization */
     .hero-bg {
-        height: 70vh;
+        height: 85vh;
         background-position: center center;
         margin: 0.5rem;
         border-radius: 1rem;
