@@ -6,10 +6,9 @@ import Footer from './Footer';
 
 interface EpisodesPageProps {
   episodes: Episode[];
-  onBackToHome: () => void;
 }
 
-const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes, onBackToHome }) => {
+const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
   const [selectedSeason, setSelectedSeason] = useState<number | 'all'>('all');
 
   // Ensure page starts at top when component mounts

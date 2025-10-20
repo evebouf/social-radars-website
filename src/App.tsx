@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import EpisodesGrid from './components/EpisodesGrid';
@@ -20,12 +20,8 @@ const App: React.FC = () => {
     window.scrollTo(0, 0);
   };
 
-  const handleBackToHome = () => {
-    setCurrentPage('home');
-  };
-
   if (currentPage === 'episodes') {
-    return <EpisodesPage episodes={episodesData} onBackToHome={handleBackToHome} />;
+    return <EpisodesPage episodes={episodesData} />;
   }
 
   return (
