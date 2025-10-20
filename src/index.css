@@ -7,14 +7,14 @@ body {
     background-color: white;
 }
 
-/* Clash Display font for headers */
+/* Inter font for headers */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Clash Display', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-display: swap;
 }
 
 .font-clash-display {
-    font-family: 'Clash Display', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-display: swap;
 }
 
