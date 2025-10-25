@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import { Episode } from '../types/episodes';
-import EpisodesGrid from './EpisodesGrid';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -9,31 +8,10 @@ interface EpisodesPageProps {
 }
 
 const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
-  const [selectedSeason, setSelectedSeason] = useState<number | 'all'>('all');
-
   // Ensure page starts at top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // Get unique seasons from episodes
-  const seasons = useMemo(() => {
-    const uniqueSeasons = [...new Set(episodes.map(ep => ep.season))].sort((a, b) => b - a);
-    return uniqueSeasons;
-  }, [episodes]);
-
-  // Filter episodes based on selected season
-  const filteredEpisodes = useMemo(() => {
-    if (selectedSeason === 'all') {
-      return episodes.sort((a, b) => {
-        if (a.season !== b.season) {
-          return b.season - a.season; // Newer seasons first
-        }
-        return 0; // Keep original order within season
-      });
-    }
-    return episodes.filter(ep => ep.season === selectedSeason);
-  }, [episodes, selectedSeason]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -47,43 +25,80 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
               <h1 className="episodes-hero-title">
                 All Episodes
               </h1>
-              {/* <p className="episodes-hero-description">
-                Complete archive of conversations with Silicon Valley's most successful founders
-              </p> */}
-              
-              {/* Season Filter Pills */}
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8 px-4 max-w-4xl mx-auto">
-                <button
-                  onClick={() => setSelectedSeason('all')}
-                  className={`px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 ${
-                    selectedSeason === 'all'
-                      ? 'bg-white text-red-600'
-                      : 'border border-white text-white hover:bg-white hover:text-red-600'
-                  }`}
-                >
-                  All Seasons
-                </button>
-                {seasons.map(season => (
-                  <button
-                    key={season}
-                    onClick={() => setSelectedSeason(season)}
-                    className={`px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 ${
-                      selectedSeason === season
-                        ? 'bg-white text-red-600'
-                        : 'border border-white text-white hover:bg-white hover:text-red-600'
-                    }`}
-                  >
-                    Season {season}
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         </section>
         
 
-        {/* All Episodes Grid */}
-        <EpisodesGrid episodes={filteredEpisodes} showAll={true} />
+        {/* All Episodes List */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-8">
+              {episodes.map((episode) => (
+                <div key={episode.id} className="flex flex-col md:flex-row gap-6 p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                  {/* Episode Image */}
+                  <div className="md:w-48 flex-shrink-0">
+                    <div className="aspect-square w-full bg-gray-100 rounded-lg overflow-hidden">
+                      {episode.image ? (
+                        <img
+                          src={episode.image}
+                          alt={episode.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.style.display = 'none';
+                            target.nextElementSibling?.classList.remove('hidden');
+                          }}
+                        />
+                      ) : null}
+                      <div className={`w-full h-full flex items-center justify-center ${episode.image ? 'hidden' : ''}`}>
+                        <div className="text-center text-gray-500">
+                          <div className="text-4xl mb-2">🎙️</div>
+                          <div className="text-sm">Coming Soon</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Episode Content */}
+                  <div className="flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">{episode.title}</h3>
+                        <p className="text-gray-600 mb-4 line-clamp-4">{episode.description}</p>
+                        <div className="flex items-center gap-4 text-sm text-gray-500">
+                          <span>Season {episode.season}</span>
+                        </div>
+                      </div>
+                      
+                      {/* Action Buttons */}
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <a
+                          href={episode.transcriptUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-small btn-small-secondary"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Transcript
+                        </a>
+                        <a
+                          href={episode.audioUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-small btn-small-primary"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Listen now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       
       <Footer />

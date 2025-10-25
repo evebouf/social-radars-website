@@ -94,7 +94,7 @@ const Navigation: React.FC = () => {
                 isScrolled ? 'text-gray-600' : 'text-white'
               }`}
             >
-              Subscribe
+              Substack
             </a>
             <a 
               href="https://twitter.com" 
@@ -160,7 +160,7 @@ const Navigation: React.FC = () => {
                 rel="noopener noreferrer"
                 className="block px-4 py-3 text-lg font-medium text-gray-800 hover:bg-gray-50 border border-transparent hover:border-red-600 rounded-full"
               >
-                Subscribe
+                Substack
               </a>
               <a 
                 href="https://twitter.com" 
