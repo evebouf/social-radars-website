@@ -26,8 +26,8 @@ const About: React.FC = () => {
             </div>
             <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
               <img 
-                src="images/how-it-started/steve-h.jpg" 
-                alt="Young Steve Huffman" 
+                src="images/how-it-started/carolynn-jessica-female-conference-1.png" 
+                alt="Carolynn and Jessica at Female Conference" 
                 className="w-full h-full object-cover"
               />
             </div>
