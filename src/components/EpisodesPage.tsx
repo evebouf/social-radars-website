@@ -33,9 +33,9 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
         {/* All Episodes List */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-8">
-              {episodes.map((episode) => (
-                <div key={episode.id} className="flex flex-col md:flex-row gap-6 p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow duration-200">
+            <div className="border-t border-gray-200">
+              {episodes.map((episode, index) => (
+                <div key={episode.id} className={`flex flex-col md:flex-row gap-6 py-8 ${index !== episodes.length - 1 ? 'border-b border-gray-200' : ''} hover:bg-gray-50 transition-colors duration-200`}>
                   {/* Episode Image */}
                   <div className="md:w-48 flex-shrink-0">
                     <div className="aspect-square w-full bg-gray-100 rounded-lg overflow-hidden">
@@ -54,7 +54,6 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
                       <div className={`w-full h-full flex items-center justify-center ${episode.image ? 'hidden' : ''}`}>
                         <div className="text-center text-gray-500">
                           <div className="text-4xl mb-2">🎙️</div>
-                          <div className="text-sm">Coming Soon</div>
                         </div>
                       </div>
                     </div>

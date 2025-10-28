@@ -97,7 +97,7 @@ const Navigation: React.FC = () => {
               Substack
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/jesslivingston" 
               target="_blank" 
               rel="noopener noreferrer"
               className={`transition-all duration-200 hover:opacity-80 ${
@@ -163,7 +163,7 @@ const Navigation: React.FC = () => {
                 Substack
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/jesslivingston" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center px-4 py-3 text-lg font-medium text-gray-800 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200"
