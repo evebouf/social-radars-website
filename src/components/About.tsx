@@ -15,67 +15,51 @@ const About: React.FC = () => {
         
         {/* Brick wall of pictures */}
         <div className="relative">
-          <div className="grid grid-cols-4 gap-4 auto-rows-[200px]">
+          <div className="grid grid-cols-3 gap-4">
             {/* Row 1 */}
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/first-batch.jpeg" 
                 alt="Y Combinator First Batch" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/steve-h.jpg" 
                 alt="Young Steve Huffman" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_Table_2.jpg" 
                 alt="YC Office" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
+            
+            {/* Row 2 */}
+            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_nutgrimace.jpeg" 
                 alt="Early YC Days" 
                 className="w-full h-full object-cover"
               />
             </div>
-            
-            {/* Row 2 */}
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_Screen_Shot_2018-06-29_at_5.17.12_PM.png" 
                 alt="YC History" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_1400-2007-02-27.jpeg" 
                 alt="Early YC Batch" 
                 className="w-full h-full object-cover"
               />
-            </div>
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-500">
-                <div className="text-center">
-                  <div className="text-2xl mb-2">📷</div>
-                  <div className="text-sm">Placeholder</div>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-1 row-span-1 bg-gray-300 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-gray-500">
-                <div className="text-center">
-                  <div className="text-2xl mb-2">📷</div>
-                  <div className="text-sm">Placeholder</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

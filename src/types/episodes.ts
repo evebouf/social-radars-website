@@ -17,7 +17,7 @@ export const episodesData: Episode[] = [
   // Founder Mode Episodes (Latest)
   {
     id: "sajith-wickramasekara",
-    name: "Sajith Wickramasekara",
+    name: "Founder Mode: Sajith Wickramasekara, Founder & CEO, Benchling",
     title: "Founder Mode: Sajith Wickramasekara, Founder & CEO, Benchling",
     description: "In today's Social Radars, we talk to Sajith Wickramasekara of Benchling. For Sajith, founder mode means a pervasive feeling of responsibility for everything at the company. Nothing can be bad at Benchling.",
     season: 4,
@@ -31,7 +31,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "jen-herbach",
-    name: "Jen Herbach",
+    name: "Founder Mode: Jen Herbach, Founder & CEO, Adventris Pharmaceuticals",
     title: "Founder Mode: Jen Herbach, Founder & CEO, Adventris Pharmaceuticals",
     description: "In the latest Social Radars, we talk to Jen Herbach of Adventris, which is working on a cancer vaccine. She was in the audience of Brian Chesky's famous founder mode talk, and immediately went home and started changing things.",
     season: 4,
@@ -45,7 +45,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "andy-lapsa",
-    name: "Andy Lapsa",
+    name: "Founder Mode: Andy Lapsa, Founder & CEO, Stoke Space",
     title: "Founder Mode: Andy Lapsa, Founder & CEO, Stoke Space",
     description: "In this episode we talk to Andy Lapsa of Stoke Space. This startup is literally doing rocket science, because they're building fully reusable rockets. Anyone who meets Andy is struck by the depth of his expertise, and in this company that's what founder mode means: a deep understanding of all the engineering problems.",
     season: 4,
@@ -59,7 +59,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "emmett-shear-founder-mode",
-    name: "Emmett Shear",
+    name: "Founder Mode: Emmett Shear, Founder, Softmax & Twitch",
     title: "Founder Mode: Emmett Shear, Founder, Softmax & Twitch",
     description: "In this Social Radars episode we talk to Emmett Shear, who told us about an interesting founder mode technique he developed when he was running Twitch. He wanted people there to be able to answer the question \"What would Emmett do?\" and he found the best way to ensure this was via the weekly all-hands, which he'd spend hours preparing for.",
     season: 4,
@@ -73,7 +73,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "christina-cacioppo",
-    name: "Christina Cacioppo",
+    name: "Founder Mode: Christina Cacioppo, Founder & CEO, Vanta",
     title: "Founder Mode: Christina Cacioppo, Founder & CEO, Vanta",
     description: "In today's episode, Christina Cacioppo gives us her take on founder mode, which is becoming more important now that Vanta has 1,000 employees around the world. She told us about a new variant of the idea: founder mode in fundraising. Christina delayed fundraising till after Vanta hit $100m ARR, which caused some investors to dismiss her, but she ended up net ahead.",
     season: 4,
@@ -87,7 +87,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "paul-gross",
-    name: "Paul Gross",
+    name: "Founder Mode: Paul Gross, Founder & CEO of Remora Carbon",
     title: "Founder Mode: Paul Gross, Founder & CEO of Remora Carbon",
     description: "In this episode we talk to Paul Gross of Remora Carbon, a startup that does carbon capture right out of the exhausts of trucks and trains. Paul has a unique take on founder mode: once a quarter he decides what the three top risks to the company are, and for that quarter, those three things, whatever they are, are the main things he works on.",
     season: 4,
@@ -101,7 +101,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "chris-best",
-    name: "Chris Best",
+    name: "Founder Mode: Chris Best, Founder & CEO, Substack",
     title: "Founder Mode: Chris Best, Founder & CEO, Substack",
     description: "In this episode, taped in front of a live audience, Chris Best tells us the story of Substack. He reminisces about his adventures with Elon Musk, and explains how he persisted in bringing to market a component of Substack that he knew was critical to their vision, even though any non-founder CEO would have killed it after years without any growth.",
     season: 4,
@@ -115,7 +115,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "jake-heller",
-    name: "Jake Heller",
+    name: "Founder Mode: Jake Heller, Founder & CEO, Casetext",
     title: "Founder Mode: Jake Heller, Founder & CEO, Casetext",
     description: "In this episode, Jake Heller talks about how he and his cofounder discovered the perfect product in a weekend of intense experimentation after GPT4 was released, and then changed the whole direction of the company. This was a classic case of founder mode, because Casetext was already 9 years old at that point and it was hard to convince everyone to change course.",
     season: 4,
@@ -129,7 +129,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "paul-graham-founder-mode",
-    name: "Paul Graham",
+    name: "Founder Mode: Paul Graham, Founder, Y Combinator",
     title: "Founder Mode: Paul Graham, Founder, Y Combinator",
     description: "Paul Graham talks about how the concept of founder mode arose from Brian Chesky's famous talk in 2024, what it means, and the latest things he's observed in the startup world.",
     season: 4,
@@ -143,7 +143,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "garry-tan-founder-mode",
-    name: "Garry Tan",
+    name: "Founder Mode: Garry Tan, President & CEO, Y Combinator",
     title: "Founder Mode: Garry Tan, President & CEO, Y Combinator",
     description: "We spoke with YC president & CEO Garry Tan about the Founder Mode event he organized for YC alumni. He talks about why founder mode matters and how the concept is evolving the the age of AI.",
     season: 4,
@@ -157,7 +157,7 @@ export const episodesData: Episode[] = [
   },
   {
     id: "brian-chesky-founder-mode",
-    name: "Brian Chesky",
+    name: "Founder Mode: Brian Chesky, Founder & CEO, Airbnb",
     title: "Founder Mode: Brian Chesky, Founder & CEO, Airbnb",
     description: "At YC's first Founder Mode event, we talk with Brian Chesky, whose legendary talk last year was the origin of the concept. Unless you were one of the lucky founders in that audience, this interview is probably the closest you can get to experiencing it.",
     season: 4,

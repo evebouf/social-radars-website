@@ -39,7 +39,7 @@ const EpisodesGrid: React.FC<EpisodesGridProps> = ({ episodes, showAll = false, 
         
         <div className="episodes-grid">
           {filteredEpisodes.map(episode => (
-            <EpisodeCard key={episode.id} episode={episode} />
+            <EpisodeCard key={episode.id} episode={episode} showDescription={showAll} />
           ))}
         </div>
         
