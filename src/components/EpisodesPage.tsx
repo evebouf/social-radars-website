@@ -31,7 +31,7 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
         
 
         {/* All Episodes List */}
-        <section className="py-20 bg-white">
+        <section className="pt-10 pb-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t border-gray-200">
               {episodes.map((episode, index) => (

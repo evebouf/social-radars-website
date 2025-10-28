@@ -45,19 +45,19 @@ const Navigation: React.FC = () => {
 
   return (
     <nav 
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className={`transition-all duration-300 flex justify-between items-center h-16 rounded-2xl ${
+        <div className={`transition-all duration-300 flex justify-between items-center h-16 rounded-full ${
           isScrolled
-            ? 'mx-4 mt-2 bg-white shadow-lg px-4 border border-gray-200' 
-            : 'mt-4 mx-4 px-4 bg-white/10 backdrop-blur-md border border-white/30'
-        }`}>
+            ? 'mt-2 bg-white/90 backdrop-blur-md shadow-lg' 
+            : 'mt-4 bg-black/10 backdrop-blur-md'
+        } px-6`}>
           {/* Logo */}
           <div className="flex-shrink-0 pl-4">
             <a href="/" className="text-lg md:text-xl font-bold">
               <span className={`font-clash-display ${
-                isScrolled ? 'text-gray-900' : 'text-white drop-shadow-lg'
+                isScrolled ? 'text-rose-600' : 'text-white drop-shadow-lg'
               }`}>
                 The Social Radars
               </span>
@@ -65,19 +65,19 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <a 
               href="/episodes" 
-              className={`font-medium px-3 py-2 transition-all duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-red-600 hover:underline hover:underline-offset-4 hover:decoration-red-600' : 'text-white drop-shadow-lg hover:text-white hover:underline hover:underline-offset-4 hover:decoration-white'
+              className={`font-medium px-2 py-2 transition-all duration-200 ${
+                isScrolled ? 'text-rose-600 hover:opacity-70' : 'text-white hover:opacity-80'
               }`}
             >
               All Episodes
             </a>
             <a 
               href="#hosts" 
-              className={`font-medium px-3 py-2 transition-all duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-red-600 hover:underline hover:underline-offset-4 hover:decoration-red-600' : 'text-white drop-shadow-lg hover:text-white hover:underline hover:underline-offset-4 hover:decoration-white'
+              className={`font-medium px-2 py-2 transition-all duration-200 ${
+                isScrolled ? 'text-rose-600 hover:opacity-70' : 'text-white hover:opacity-80'
               }`}
               onClick={(e) => {
                 e.preventDefault();
@@ -90,8 +90,8 @@ const Navigation: React.FC = () => {
               href="https://substack.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className={`font-medium px-3 py-2 transition-all duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-red-600 hover:underline hover:underline-offset-4 hover:decoration-red-600' : 'text-white drop-shadow-lg hover:text-white hover:underline hover:underline-offset-4 hover:decoration-white'
+              className={`font-medium px-2 py-2 transition-all duration-200 ${
+                isScrolled ? 'text-rose-600 hover:opacity-70' : 'text-white hover:opacity-80'
               }`}
             >
               Substack
@@ -100,15 +100,15 @@ const Navigation: React.FC = () => {
               href="https://x.com/jesslivingston" 
               target="_blank" 
               rel="noopener noreferrer"
-              className={`transition-all duration-200 hover:opacity-80 ${
-                isScrolled ? 'text-gray-700 hover:text-red-600' : 'text-white drop-shadow-lg'
+              className={`px-2 py-2 transition-all duration-200 ${
+                isScrolled ? 'text-rose-600 hover:opacity-70' : 'text-white hover:opacity-80'
               }`}
             >
               <svg width="16" height="16" viewBox="0 0 300 300.251" fill="currentColor">
                 <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/>
               </svg>
             </a>
-            <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 shadow-md">
+            <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-200">
               Listen Now
             </a>
           </div>
@@ -119,7 +119,7 @@ const Navigation: React.FC = () => {
               onClick={toggleMobileMenu}
               className={`p-2 rounded-md transition-colors duration-200 ${
                 isScrolled 
-                  ? 'text-gray-700' 
+                  ? 'text-rose-600' 
                   : 'text-white drop-shadow-lg'
               }`}
             >
@@ -137,16 +137,16 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-3 bg-white shadow-xl border border-gray-200 mx-4 rounded-b-2xl">
+            <div className="px-4 pt-4 pb-6 space-y-3 bg-white/90 backdrop-blur-md shadow-lg rounded-3xl mx-4 mt-2">
               <a 
                 href="/episodes" 
-                className="block px-4 py-3 text-lg font-medium text-gray-800 hover:text-red-600 hover:underline hover:underline-offset-4 hover:decoration-red-600 transition-all duration-200"
+                className="block px-4 py-3 text-lg font-medium text-rose-600 hover:text-rose-700 transition-all duration-200"
               >
                 All Episodes
               </a>
               <a 
                 href="#hosts" 
-                className="block px-4 py-3 text-lg font-medium text-gray-800 hover:text-red-600 hover:underline hover:underline-offset-4 hover:decoration-red-600 transition-all duration-200"
+                className="block px-4 py-3 text-lg font-medium text-rose-600 hover:text-rose-700 transition-all duration-200"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection('hosts');
@@ -158,7 +158,7 @@ const Navigation: React.FC = () => {
                 href="https://substack.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block px-4 py-3 text-lg font-medium text-gray-800 hover:text-red-600 hover:underline hover:underline-offset-4 hover:decoration-red-600 transition-all duration-200"
+                className="block px-4 py-3 text-lg font-medium text-rose-600 hover:text-rose-700 transition-all duration-200"
               >
                 Substack
               </a>
@@ -166,7 +166,7 @@ const Navigation: React.FC = () => {
                 href="https://x.com/jesslivingston" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center px-4 py-3 text-lg font-medium text-gray-800 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200"
+                className="flex items-center px-4 py-3 text-lg font-medium text-rose-600 hover:text-rose-700 transition-all duration-200"
               >
                 <svg width="16" height="16" viewBox="0 0 300 300.251" fill="currentColor" className="mr-2">
                   <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/>
@@ -174,7 +174,7 @@ const Navigation: React.FC = () => {
                 Follow on X
               </a>
               <div className="px-4 py-2">
-                <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-200 inline-block text-center shadow-md">
+                <a href="https://pod.link/1677066062" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-200 inline-block text-center">
                   Listen Now
                 </a>
               </div>
