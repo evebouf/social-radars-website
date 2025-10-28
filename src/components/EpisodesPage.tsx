@@ -64,7 +64,7 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{episode.title}</h3>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{episode.title}</h3>
                         <p className="text-gray-600 mb-4 line-clamp-4">{episode.description}</p>
                         <div className="flex items-center gap-4 text-sm text-gray-500">
                           <span>Season {episode.season}</span>
