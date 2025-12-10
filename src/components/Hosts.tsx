@@ -48,7 +48,7 @@ const Hosts: React.FC = () => {
             <div className="flex-1 lg:order-2">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Carolynn Levy</h3>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Carolynn Levy is Managing Director, Chief Legal Officer and head of the People Operations team at Y Combinator. During her 25-year legal career, Carolynn has helped thousands of startup founders with legal and business issues. She is known for creating the Safe, an open-sourced financing document that simplified investing in early stage companies.
+                Carolynn Levy is Managing Director, Legal at Y Combinator. During her 25-year legal career, Carolynn has helped thousands of startup founders with legal and business issues. She is known for creating the Safe, an open-sourced financing document that simplified investing in early stage companies.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mt-4">
                 Carolynn got her BA from UCLA and her JD from University of San Francisco. She joined Wilson Sonsini Goodrich and Rosati right after law school and stayed for 14 years, doing corporate and securities and M&A work. She lives in the SF Bay Area with her husband and is almost an empty-nester. She loves her two chihuahua rescues more than could be considered normal.
