@@ -17,21 +17,21 @@ const About: React.FC = () => {
         <div className="relative">
           <div className="grid grid-cols-3 gap-4">
             {/* Row 1 */}
-            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/first-batch.jpeg" 
                 alt="Y Combinator First Batch" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/carolynn-jessica-female-conference-1.png" 
                 alt="Carolynn and Jessica at Female Conference" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_Table_2.jpg" 
                 alt="YC Office" 
@@ -40,21 +40,21 @@ const About: React.FC = () => {
             </div>
             
             {/* Row 2 */}
-            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_nutgrimace.jpeg" 
                 alt="Early YC Days" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_Screen_Shot_2018-06-29_at_5.17.12_PM.png" 
                 alt="YC History" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
               <img 
                 src="images/how-it-started/medium_1400-2007-02-27.jpeg" 
                 alt="Early YC Batch" 

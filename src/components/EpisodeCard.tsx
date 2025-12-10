@@ -15,6 +15,9 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode, showDescription = tr
     if (episode.seasonLabel === 'Founder Mode') {
       return null; // Don't show season for Founder Mode
     }
+    if (episode.seasonLabel === '') {
+      return null; // Don't show season if explicitly set to empty
+    }
     if (episode.seasonLabel) {
       return episode.seasonLabel; // Use custom label if provided
     }
