@@ -14,7 +14,21 @@ export interface Episode {
 }
 
 export const episodesData: Episode[] = [
-  // Founder Mode Episodes (Latest)
+  // Season 5 Episodes (Latest)
+  {
+    id: "blake-scholl",
+    name: "Blake Scholl, Founder & CEO of Boom Supersonic",
+    title: "S5: Blake Scholl, Founder & CEO of Boom Supersonic",
+    description: "In today's episode, we talk to Blake Scholl, Founder & CEO of Boom Supersonic. Building a supersonic airliner sounds hard, and it is: startups often have dramatic ups and downs, but Boom's are among the most dramatic we've heard. His story was a gripping series of last-minute saves.",
+    season: 5,
+    image: "/images/episodes/blake-scholl.jpg",
+    imagePosition: "center",
+    hasTranscript: true,
+    hasAudio: true,
+    audioUrl: "https://pod.link/1677066062/episode/ODJiOWU1YjMtNjc3My00ZWNhLTk5NDAtNjA3OTRjNjZlM2Q1",
+    transcriptUrl: "https://www.thesocialradars.com/s/TSR-x-Blake-Scholl-S5.pdf"
+  },
+  // Founder Mode Episodes
   {
     id: "sajith-wickramasekara",
     name: "Sajith Wickramasekara, Founder & CEO, Benchling",

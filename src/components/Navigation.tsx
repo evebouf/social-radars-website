@@ -35,8 +35,11 @@ const Navigation: React.FC = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false); // Close mobile menu after navigation
+    } else {
+      // If element doesn't exist (e.g., on episodes page), navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
     }
-    setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
   const toggleMobileMenu = () => {
@@ -45,14 +48,12 @@ const Navigation: React.FC = () => {
 
   return (
     <nav 
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-6"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className={`transition-all duration-300 flex justify-between items-center h-16 rounded-full ${
-          isScrolled
-            ? 'mt-2 bg-white/90 backdrop-blur-md shadow-lg' 
-            : 'mt-4 bg-black/10 backdrop-blur-md'
-        } px-6`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 pl-4">
             <a href="/" className="text-lg md:text-xl font-bold">
@@ -87,7 +88,7 @@ const Navigation: React.FC = () => {
               Meet the Hosts
             </a>
             <a 
-              href="https://substack.com" 
+              href="https://substack.com/@thesocialradars" 
               target="_blank" 
               rel="noopener noreferrer"
               className={`font-medium px-2 py-2 transition-all duration-200 ${
@@ -95,6 +96,18 @@ const Navigation: React.FC = () => {
               }`}
             >
               Substack
+            </a>
+            <a 
+              href="https://www.youtube.com/@TheSocialRadars" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`px-2 py-2 transition-all duration-200 ${
+                isScrolled ? 'text-rose-600 hover:opacity-70' : 'text-white hover:opacity-80'
+              }`}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
             </a>
             <a 
               href="https://x.com/jesslivingston" 
@@ -155,12 +168,23 @@ const Navigation: React.FC = () => {
                 Meet the Hosts
               </a>
               <a 
-                href="https://substack.com" 
+                href="https://substack.com/@thesocialradars" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block px-4 py-3 text-lg font-medium text-rose-600 hover:text-rose-700 transition-all duration-200"
               >
                 Substack
+              </a>
+              <a 
+                href="https://www.youtube.com/@TheSocialRadars" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center px-4 py-3 text-lg font-medium text-rose-600 hover:text-rose-700 transition-all duration-200"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                YouTube
               </a>
               <a 
                 href="https://x.com/jesslivingston" 
