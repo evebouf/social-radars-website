@@ -40,13 +40,13 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
                   <div className="md:w-48 flex-shrink-0">
                     <div className="aspect-square w-full bg-gray-100 rounded-lg overflow-hidden">
                       <img
-                        src={episode.image || 'images/episodes/TSR-primary-cover-art.jpg'}
+                        src={episode.image || 'images/episode-covers/TSR-primary-cover-art.jpg'}
                         alt={episode.title}
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          if (target.src !== 'images/episodes/TSR-primary-cover-art.jpg') {
-                            target.src = 'images/episodes/TSR-primary-cover-art.jpg';
+                          if (target.src !== 'images/episode-covers/TSR-primary-cover-art.jpg') {
+                            target.src = 'images/episode-covers/TSR-primary-cover-art.jpg';
                           }
                         }}
                       />
