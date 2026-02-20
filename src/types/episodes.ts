@@ -208,7 +208,7 @@ export const episodesData: Episode[] = [
     id: "kashish-gupta",
     name: "Kashish Gupta, Founder and co-CEO of Hightouch",
     title: "Founder Mode: Kashish Gupta, Founder and co-CEO of Hightouch",
-    description: "",
+    description: "In this episode we talked to Kashish Gupta of Hightouch, who made an important point about founder mode: one of the most important things founders can do that employees can't is to take big risks.",
     season: 4,
     image: "/images/episode-covers/kashish-gupta.png",
     imagePosition: "center",
