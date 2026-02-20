@@ -66,24 +66,28 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
                       
                       {/* Action Buttons */}
                       <div className="flex flex-col sm:flex-row gap-3">
-                        <a
-                          href={episode.transcriptUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-small btn-small-secondary"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Transcript
-                        </a>
-                        <a
-                          href={episode.audioUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn-small btn-small-primary"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Listen now
-                        </a>
+                        {episode.hasTranscript && episode.transcriptUrl && (
+                          <a
+                            href={episode.transcriptUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-small btn-small-secondary"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Transcript
+                          </a>
+                        )}
+                        {episode.hasAudio && episode.audioUrl && (
+                          <a
+                            href={episode.audioUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-small btn-small-primary"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Listen now
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
