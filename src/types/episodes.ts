@@ -324,7 +324,7 @@ export const episodesData: Episode[] = [
     id: "ron-conway-part-4",
     name: "Ron Conway",
     title: "Ron Conway, Founder, SV Angel Part 4 (Bonus)",
-    description: "",
+    description: "In part 4 of our series with legendary investor Ron Conway, we get into the story of Napster. Napster was founded by Shawn Fanning and Sean Parker in 1999 and was the first app to let people access music on demand, at scale. Though it ultimately failed amidst a series of lawsuits, Napster blazed the trail for Spotify and Apple Music, leaving in its wake a series of stories as interesting as the founders themselves.",
     season: 4,
     image: "/images/episode-covers/ron-conway.jpg",
     imagePosition: "center",

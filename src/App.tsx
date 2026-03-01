@@ -7,6 +7,7 @@ import Quote from './components/Quote';
 import Hosts from './components/Hosts';
 import About from './components/About';
 import Footer from './components/Footer';
+import RonConwaySeries from './components/RonConwaySeries';
 import EpisodesPage from './components/EpisodesPage';
 import { episodesData } from './types/episodes';
 import './App.css';
@@ -56,6 +57,7 @@ const App: React.FC = () => {
         showAll={false}
         onViewAll={handleViewAllEpisodes}
       />
+      <RonConwaySeries episodes={episodesData} />
       <Testimonials />
       <Hosts />
       <About />

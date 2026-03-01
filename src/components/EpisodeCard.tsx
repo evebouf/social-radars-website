@@ -4,9 +4,10 @@ import { Episode } from '../types/episodes';
 interface EpisodeCardProps {
   episode: Episode;
   showDescription?: boolean;
+  showTitle?: boolean;
 }
 
-const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode, showDescription = true }) => {
+const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode, showDescription = true, showTitle = false }) => {
   const [imageError, setImageError] = useState(false);
   const imageClass = episode.imagePosition === 'top' ? 'episode-image-top' : '';
   
@@ -62,7 +63,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode, showDescription = tr
         </div>
       </div>
       <div className="episode-content">
-        <h3 className="episode-name">{episode.name}</h3>
+        <h3 className="episode-name">{showTitle ? episode.title : episode.name}</h3>
         {showDescription && <p className="episode-description">{episode.description}</p>}
         <div className="episode-footer">
           {seasonDisplay && (
