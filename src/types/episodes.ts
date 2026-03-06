@@ -18,6 +18,20 @@ export interface Episode {
 export const episodesData: Episode[] = [
   // Season 5 Episodes (Latest)
   {
+    id: "peter-reinhardt",
+    name: "Peter Reinhardt, CEO & Co-Founder, Charm Industrial; CEO & Co-Founder, Segment",
+    title: "Peter Reinhardt, CEO & Co-Founder, Charm Industrial; CEO & Co-Founder, Segment",
+    description: "In the latest episode of The Social Radars, we talk to Peter Reinhardt, who has the distinction of having started two iconic companies that are completely different from one another: Segment, which does web analytics, and Charm Industrial, which catches CO2 before it can return to the atmosphere and buries it in the ground.",
+    season: 5,
+    image: "/images/episode-covers/peter-reinhardt.jpg",
+    imagePosition: "center",
+    seasonLabel: "",
+    hasTranscript: true,
+    hasAudio: true,
+    audioUrl: "https://pod.link/1677066062/episode/NWU2NWE5MzUtZjdjNi00ZTc5LTk3MDktYjM1ZDVkNDZlNzBm",
+    transcriptUrl: "/transcripts/TSR-S5-Peter-Reinhardt.pdf",
+  },
+  {
     id: "tom-blomfield",
     name: "Tom Blomfield, Partner, Y Combinator; Co-Founder, Monzo",
     title: "Tom Blomfield, Partner, Y Combinator; Co-Founder, Monzo",
