@@ -18,6 +18,20 @@ export interface Episode {
 export const episodesData: Episode[] = [
   // Season 5 Episodes (Latest)
   {
+    id: "paul-graham-s5",
+    name: "Paul Graham, Founder, Y Combinator",
+    title: "Paul Graham, Founder, Y Combinator",
+    description: "Paul Graham is back in the latest episode of The Social Radars. This time we focus on what was going on behind the scenes at Y Combinator back in the early years. If you really want to understand what YC is like and what made it that way, this is the episode for you.",
+    season: 5,
+    image: "/images/episode-covers/paul-graham_compressed.jpg",
+    imagePosition: "center",
+    seasonLabel: "",
+    hasTranscript: true,
+    hasAudio: true,
+    audioUrl: "https://pod.link/1677066062/episode/YjI3NmQxYTgtNzI4MS00MjIwLTgxNmItNjkzMjQ0YzdmM2Rm",
+    transcriptUrl: "/transcripts/TSR-S5-Paul-Graham.pdf",
+  },
+  {
     id: "peter-reinhardt",
     name: "Peter Reinhardt, CEO & Co-Founder, Charm Industrial; CEO & Co-Founder, Segment",
     title: "Peter Reinhardt, CEO & Co-Founder, Charm Industrial; CEO & Co-Founder, Segment",
