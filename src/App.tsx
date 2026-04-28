@@ -9,11 +9,12 @@ import About from './components/About';
 import Footer from './components/Footer';
 import RonConwaySeries from './components/RonConwaySeries';
 import EpisodesPage from './components/EpisodesPage';
+import RonConwayPage from './components/RonConwayPage';
 import { episodesData } from './types/episodes';
 import './App.css';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'episodes'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'episodes' | 'ron-conway'>('home');
 
   // Handle URL-based routing
   useEffect(() => {
@@ -21,6 +22,9 @@ const App: React.FC = () => {
       const path = window.location.pathname;
       if (path === '/episodes') {
         setCurrentPage('episodes');
+        window.scrollTo(0, 0);
+      } else if (path === '/ron-conway') {
+        setCurrentPage('ron-conway');
         window.scrollTo(0, 0);
       } else {
         setCurrentPage('home');
@@ -46,6 +50,10 @@ const App: React.FC = () => {
 
   if (currentPage === 'episodes') {
     return <EpisodesPage episodes={episodesData} />;
+  }
+
+  if (currentPage === 'ron-conway') {
+    return <RonConwayPage episodes={episodesData} />;
   }
 
   return (
