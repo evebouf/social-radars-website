@@ -20,7 +20,7 @@ export const episodesData: Episode[] = [
   {
     id: "ron-conway-svb",
     name: "Ron Conway, Founder, SV Angel",
-    title: "Ron Conway, Founder, SV Angel (Part 5)",
+    title: "Ron Conway, Founder, SV Angel (Part 5): Silicon Valley Bank Crisis",
     description: "In today's Social Radars episode we talk to Ron Conway about one of the most momentous events in recent Silicon Valley history, the failure of Silicon Valley Bank, and the frantic behind-the-scenes efforts that prevented it, with just hours to spare, from triggering a Depression-style financial panic.",
     season: 5,
     image: "/images/episode-covers/ron-conway.jpg",
@@ -379,7 +379,7 @@ export const episodesData: Episode[] = [
   {
     id: "ron-conway-part-4",
     name: "Ron Conway",
-    title: "Ron Conway, Founder, SV Angel (Part 4)",
+    title: "Ron Conway, Founder, SV Angel (Part 4): The Napster Story",
     description: "In part 4 of our series with legendary investor Ron Conway, we get into the story of Napster. Napster was founded by Shawn Fanning and Sean Parker in 1999 and was the first app to let people access music on demand, at scale. Though it ultimately failed amidst a series of lawsuits, Napster blazed the trail for Spotify and Apple Music, leaving in its wake a series of stories as interesting as the founders themselves.",
     season: 4,
     image: "/images/episode-covers/ron-conway.jpg",
@@ -393,7 +393,7 @@ export const episodesData: Episode[] = [
   {
     id: "ron-conway-part-3",
     name: "Ron Conway",
-    title: "Ron Conway, Founder, SV Angel (Part 3)",
+    title: "Ron Conway, Founder, SV Angel (Part 3): Inside Early Google",
     description: "In Part 3 of our conversation with Ron Conway, he takes us behind the scenes at early Google. Ron was involved with Google almost from the start; he and Ram Shriram arranged their Series A round. So if you want to know what a really, really big success looked like at the beginning, this is the episode for you.",
     season: 4,
     image: "/images/episode-covers/ron-conway.jpg",
@@ -498,7 +498,7 @@ export const episodesData: Episode[] = [
   {
     id: "ron-conway-part-2",
     name: "Ron Conway",
-    title: "Ron Conway, Founder, SV Angel (Part 2)",
+    title: "Ron Conway, Founder, SV Angel (Part 2): Betting on the Internet",
     description: "In Part 2 of our conversation with legendary investor Ron Conway, we chat about how he made one of the most prescient decisions in the history of startup investing when he decided in the early 1990s to focus exclusively on investing in internet startups. It's like being a fly on the wall at the beginning of the internet boom as he takes us through shadowing Sequoia founder Don Valentine and \"living\" in Netscape's office as it took off.",
     season: 4,
     image: "/images/episode-covers/ron-conway.jpg",
@@ -649,7 +649,7 @@ export const episodesData: Episode[] = [
   {
     id: "ron-conway-s3",
     name: "Ron Conway",
-    title: "Ron Conway, Founder, SV Angel (Part 1)",
+    title: "Ron Conway, Founder, SV Angel (Part 1): Silicon Valley Origins",
     description: "Ron Conway has been close to the center of things for longer than anyone else in Silicon Valley, from the point when he started his career at National Semiconductor in the early '70s, to the AI conference he organized last month. He's the embodiment and the transmitter of Silicon Valley culture. He knows all the stories, usually because he was personally involved in them. In this episode we talk about what Silicon Valley was like when it was all about silicon, and how his career at Nat Semi led to working at and then running tech companies, and finally to angel investing.",
     season: 3,
     image: "/images/episode-covers/ron-conway.jpg",
