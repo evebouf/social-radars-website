@@ -18,6 +18,19 @@ export interface Episode {
 export const episodesData: Episode[] = [
   // Season 5 Episodes (Latest)
   {
+    id: "justin-kan",
+    name: "Justin Kan, Cofounder, Twitch",
+    title: "Justin Kan, Cofounder, Twitch",
+    description: "In this episode of The Social Radars, we talk to Justin Kan, who has spent his whole adult life in startups, much of it around YC in some way. We've funded him three times, the first time in the very first batch, and he's been a YC partner too. So Justin has seen it all, and because he's so candid, he tells it all too.",
+    season: 5,
+    image: "/images/episode-covers/justin-kan.jpg",
+    imagePosition: "center",
+    seasonLabel: "",
+    hasTranscript: false,
+    hasAudio: true,
+    audioUrl: "https://pod.link/1677066062/episode/ZTdmNmM5OTMtN2I1NC00YTNmLTkxOTQtYjcyZjE2MTRiNTA3",
+  },
+  {
     id: "paul-graham-s5",
     name: "Paul Graham, Founder, Y Combinator",
     title: "Paul Graham, Founder, Y Combinator",
