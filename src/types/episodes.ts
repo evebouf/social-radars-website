@@ -18,6 +18,20 @@ export interface Episode {
 export const episodesData: Episode[] = [
   // Season 5 Episodes (Latest)
   {
+    id: "ron-conway-svb",
+    name: "Ron Conway, Founder, SV Angel",
+    title: "Ron Conway, Founder, SV Angel (Part 5)",
+    description: "In today's Social Radars episode we talk to Ron Conway about one of the most momentous events in recent Silicon Valley history, the failure of Silicon Valley Bank, and the frantic behind-the-scenes efforts that prevented it, with just hours to spare, from triggering a Depression-style financial panic.",
+    season: 5,
+    image: "/images/episode-covers/ron-conway.jpg",
+    imagePosition: "center",
+    seasonLabel: "",
+    hasTranscript: true,
+    hasAudio: true,
+    audioUrl: "https://pod.link/1677066062/episode/MmRjMWUwMmUtNWEwYi00OTY2LTg1YTctZTRmYmU3MjFlNjAz",
+    transcriptUrl: "/transcripts/TSR-S5-Ron-Conway.pdf",
+  },
+  {
     id: "justin-kan",
     name: "Justin Kan, Cofounder, Twitch",
     title: "Justin Kan, Cofounder, Twitch",
@@ -365,7 +379,7 @@ export const episodesData: Episode[] = [
   {
     id: "ron-conway-part-4",
     name: "Ron Conway",
-    title: "Ron Conway, Founder, SV Angel Part 4 (Bonus)",
+    title: "Ron Conway, Founder, SV Angel (Part 4)",
     description: "In part 4 of our series with legendary investor Ron Conway, we get into the story of Napster. Napster was founded by Shawn Fanning and Sean Parker in 1999 and was the first app to let people access music on demand, at scale. Though it ultimately failed amidst a series of lawsuits, Napster blazed the trail for Spotify and Apple Music, leaving in its wake a series of stories as interesting as the founders themselves.",
     season: 4,
     image: "/images/episode-covers/ron-conway.jpg",
@@ -635,7 +649,7 @@ export const episodesData: Episode[] = [
   {
     id: "ron-conway-s3",
     name: "Ron Conway",
-    title: "Ron Conway, Founder, SV Angel",
+    title: "Ron Conway, Founder, SV Angel (Part 1)",
     description: "Ron Conway has been close to the center of things for longer than anyone else in Silicon Valley, from the point when he started his career at National Semiconductor in the early '70s, to the AI conference he organized last month. He's the embodiment and the transmitter of Silicon Valley culture. He knows all the stories, usually because he was personally involved in them. In this episode we talk about what Silicon Valley was like when it was all about silicon, and how his career at Nat Semi led to working at and then running tech companies, and finally to angel investing.",
     season: 3,
     image: "/images/episode-covers/ron-conway.jpg",
