@@ -19,7 +19,7 @@ export const episodesData: Episode[] = [
   // Season 5 Episodes (Latest)
   {
     id: "ron-conway-svb",
-    name: "Ron Conway, Founder, SV Angel",
+    name: "Ron Conway, Founder, SV Angel (Part 5): Silicon Valley Bank Crisis",
     title: "Ron Conway, Founder, SV Angel (Part 5): Silicon Valley Bank Crisis",
     description: "In today's Social Radars episode we talk to Ron Conway about one of the most momentous events in recent Silicon Valley history, the failure of Silicon Valley Bank, and the frantic behind-the-scenes efforts that prevented it, with just hours to spare, from triggering a Depression-style financial panic.",
     season: 5,
