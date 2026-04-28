@@ -26,9 +26,10 @@ export const episodesData: Episode[] = [
     image: "/images/episode-covers/justin-kan.jpg",
     imagePosition: "center",
     seasonLabel: "",
-    hasTranscript: false,
+    hasTranscript: true,
     hasAudio: true,
     audioUrl: "https://pod.link/1677066062/episode/ZTdmNmM5OTMtN2I1NC00YTNmLTkxOTQtYjcyZjE2MTRiNTA3",
+    transcriptUrl: "/transcripts/TSR-S5-Justin-Kan.pdf",
   },
   {
     id: "paul-graham-s5",
