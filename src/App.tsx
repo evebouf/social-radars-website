@@ -10,11 +10,12 @@ import Footer from './components/Footer';
 import RonConwaySeries from './components/RonConwaySeries';
 import EpisodesPage from './components/EpisodesPage';
 import RonConwayPage from './components/RonConwayPage';
+import OgImagePage from './components/OgImagePage';
 import { episodesData } from './types/episodes';
 import './App.css';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'episodes' | 'ron-conway'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'episodes' | 'ron-conway' | 'og-image'>('home');
 
   // Handle URL-based routing
   useEffect(() => {
@@ -25,6 +26,9 @@ const App: React.FC = () => {
         window.scrollTo(0, 0);
       } else if (path === '/ron-conway') {
         setCurrentPage('ron-conway');
+        window.scrollTo(0, 0);
+      } else if (path === '/og' || path === '/og-image') {
+        setCurrentPage('og-image');
         window.scrollTo(0, 0);
       } else {
         setCurrentPage('home');
@@ -54,6 +58,10 @@ const App: React.FC = () => {
 
   if (currentPage === 'ron-conway') {
     return <RonConwayPage episodes={episodesData} />;
+  }
+
+  if (currentPage === 'og-image') {
+    return <OgImagePage />;
   }
 
   return (
