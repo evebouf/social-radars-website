@@ -18,6 +18,20 @@ export interface Episode {
 export const episodesData: Episode[] = [
   // Season 5 Episodes (Latest)
   {
+    id: "john-coogan",
+    name: "John Coogan, Co-Founder & Host at TBPN",
+    title: "John Coogan, Co-Founder & Host at TBPN",
+    description: "In the latest Social Radars episode, we turn the tables on John Coogan of TBPN. Now he's answering the questions instead of asking them. We especially liked talking to John because he shares a similar philosophy to us: instead of attacking your subjects, which is easy and boring, ask them the question that will yield the most interesting answers.",
+    season: 5,
+    image: "/images/episode-covers/john-coogan.jpg",
+    imagePosition: "center",
+    seasonLabel: "",
+    hasTranscript: true,
+    hasAudio: true,
+    audioUrl: "https://pod.link/1677066062/episode/ODZhMzM3NGYtMjM4ZS00MjliLWE5NjktYTdiNGMzYjgxNjlj",
+    transcriptUrl: "/transcripts/TSR-S5-John-Coogan.pdf",
+  },
+  {
     id: "ron-conway-svb",
     name: "Ron Conway, Founder, SV Angel (Part 5): Silicon Valley Bank Crisis",
     title: "Ron Conway, Founder, SV Angel (Part 5): Silicon Valley Bank Crisis",
