@@ -18,11 +18,11 @@ export interface ChangelogEntry {
 
 export const DEV_START = '2025-08-12T07:32:24-07:00';
 export const TAGLINE = 'Come be a fly on the wall';
-export const PULL_REQUESTS = 12;
-export const COMMITS = 69;
-export const RELEASES = 69;
-export const LINES_ADDED = 7955;
-export const LINES_DELETED = 4377;
+export const PULL_REQUESTS = 15;
+export const COMMITS = 73;
+export const RELEASES = 72;
+export const LINES_ADDED = 9399;
+export const LINES_DELETED = 4421;
 
 // Commits per day, for the contribution heatmap.
 export const COMMIT_ACTIVITY: Record<string, number> = {
@@ -41,6 +41,7 @@ export const COMMIT_ACTIVITY: Record<string, number> = {
   '2026-03-19': 1,
   '2026-04-28': 10,
   '2026-05-21': 2,
+  '2026-07-29': 4,
 };
 
 // Oldest → newest. The page renders newest first.
@@ -884,5 +885,48 @@ export const changelogEntries: ChangelogEntry[] = [
     dels: 0,
     title: 'John Coogan cover art',
     bullets: ['Cover image for the John Coogan episode.'],
+  },
+  {
+    version: '1.68',
+    badge: 'new',
+    day: '2026-07-29',
+    time: '3:25 PM PDT',
+    author: 'Eve Bouffard',
+    adds: 39,
+    dels: 38,
+    title: 'Every episode gets a transcript',
+    bullets: [
+      '38 PDF transcripts across Seasons 1–5 — Brian Chesky, Garry Tan, Paul Buchheit, Tony Xu, Brian Armstrong, the Stripe episode, and more.',
+      'Episode data updated so every transcript is served from the site itself.',
+    ],
+  },
+  {
+    version: '1.69',
+    badge: 'new',
+    day: '2026-07-29',
+    time: '3:41 PM PDT',
+    author: 'Chris Hall',
+    adds: 1356,
+    dels: 1,
+    title: 'A secret changelog',
+    bullets: [
+      "You're looking at it: a hidden page at /changelog documenting every release since day one.",
+      "Live in-development clock, line-count bar, and a commit heatmap — all generated from the site's real git history.",
+      'Not linked from anywhere. If you found this, you know.',
+    ],
+  },
+  {
+    version: '1.70',
+    badge: 'improved',
+    day: '2026-07-29',
+    time: '3:55 PM PDT',
+    author: 'Chris Hall',
+    adds: 49,
+    dels: 5,
+    title: 'The changelog learns about itself',
+    bullets: [
+      "Today's releases added — the transcript drop and this very page.",
+      'Totals, heatmap, and release count brought up to date.',
+    ],
   },
 ];
