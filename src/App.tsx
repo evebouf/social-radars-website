@@ -11,11 +11,12 @@ import RonConwaySeries from './components/RonConwaySeries';
 import EpisodesPage from './components/EpisodesPage';
 import RonConwayPage from './components/RonConwayPage';
 import OgImagePage from './components/OgImagePage';
+import ChangelogPage from './components/ChangelogPage';
 import { episodesData } from './types/episodes';
 import './App.css';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'episodes' | 'ron-conway' | 'og-image'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'episodes' | 'ron-conway' | 'og-image' | 'changelog'>('home');
 
   // Handle URL-based routing
   useEffect(() => {
@@ -29,6 +30,9 @@ const App: React.FC = () => {
         window.scrollTo(0, 0);
       } else if (path === '/og' || path === '/og-image') {
         setCurrentPage('og-image');
+        window.scrollTo(0, 0);
+      } else if (path === '/changelog') {
+        setCurrentPage('changelog');
         window.scrollTo(0, 0);
       } else {
         setCurrentPage('home');
@@ -62,6 +66,10 @@ const App: React.FC = () => {
 
   if (currentPage === 'og-image') {
     return <OgImagePage />;
+  }
+
+  if (currentPage === 'changelog') {
+    return <ChangelogPage />;
   }
 
   return (
