@@ -17,32 +17,6 @@ export interface ChangelogEntry {
 }
 
 export const DEV_START = '2025-08-12T07:32:24-07:00';
-export const TAGLINE = 'Come be a fly on the wall';
-export const PULL_REQUESTS = 15;
-export const COMMITS = 73;
-export const RELEASES = 72;
-export const LINES_ADDED = 9399;
-export const LINES_DELETED = 4421;
-
-// Commits per day, for the contribution heatmap.
-export const COMMIT_ACTIVITY: Record<string, number> = {
-  '2025-08-12': 2,
-  '2025-10-08': 2,
-  '2025-10-14': 14,
-  '2025-10-19': 10,
-  '2025-10-20': 7,
-  '2025-10-24': 3,
-  '2025-10-27': 7,
-  '2025-12-10': 5,
-  '2026-02-20': 2,
-  '2026-02-21': 1,
-  '2026-03-01': 1,
-  '2026-03-06': 2,
-  '2026-03-19': 1,
-  '2026-04-28': 10,
-  '2026-05-21': 2,
-  '2026-07-29': 4,
-};
 
 // Oldest → newest. The page renders newest first.
 export const changelogEntries: ChangelogEntry[] = [
@@ -927,6 +901,20 @@ export const changelogEntries: ChangelogEntry[] = [
     bullets: [
       "Today's releases added — the transcript drop and this very page.",
       'Totals, heatmap, and release count brought up to date.',
+    ],
+  },
+  {
+    version: '1.71',
+    badge: 'improved',
+    day: '2026-07-29',
+    time: '4:20 PM PDT',
+    author: 'Chris Hall',
+    adds: 62,
+    dels: 404,
+    title: 'The changelog goes on brand',
+    bullets: [
+      'Redesigned to match the rest of the site: red hero, Clash Display headlines, and a clean divider list on white.',
+      'The imported dashboard look — heatmap, live clock, line counts — retires.',
     ],
   },
 ];
