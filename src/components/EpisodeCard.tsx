@@ -42,10 +42,12 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode, showDescription = tr
     >
       <div className="episode-image relative overflow-hidden">
         {episode.image && !imageError ? (
-          <img 
-            src={episode.image} 
-            alt={episode.name} 
+          <img
+            src={episode.image}
+            alt={episode.name}
             className={imageClass}
+            loading="lazy"
+            decoding="async"
             onError={() => setImageError(true)}
           />
         ) : (

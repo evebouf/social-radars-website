@@ -42,6 +42,8 @@ const EpisodesPage: React.FC<EpisodesPageProps> = ({ episodes }) => {
                       <img
                         src={episode.image || 'images/episode-covers/TSR-primary-cover-art.jpg'}
                         alt={episode.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
